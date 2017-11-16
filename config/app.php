@@ -149,6 +149,7 @@ return [
         '\Krucas\Notification\NotificationServiceProvider',
         'Intervention\Image\ImageServiceProvider',
         'Zizaco\Entrust\EntrustServiceProvider',
+        'App\Modules\ModuleServiceProvider',
         'Ollieread\Multiauth\MultiauthServiceProvider',
         'Ollieread\Multiauth\Passwords\PasswordResetServiceProvider'
 
