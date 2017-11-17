@@ -1,76 +1,59 @@
-@extends('Admin::layouts.layout')
+@extends('Admin::layouts.main-layout')
 
-@section('content')
-<section class="content-header">
-  <h1>Country</h1>
-</section>
-<section class="content">
-
-	<div class="box">
-		<div class="container-fluid">
-			{!!Form::open(array('route'=>array('admin.country.store'),'class'=>'formAdmin form-horizontal','files'=>true))!!}
-				<div class="form-group">
-					<label for="">Hình đại diện</label>
-					{!!Form::file('img')!!}
-					@if($errors->first('img'))
-						<p class="error">{!!$errors->first('img')!!}</p>
-					@endif
-				</div>
-				<div class="form-group">
-					<label for="">Hình Slideshow</label>
-					{!!Form::file('imgslide')!!}
-				</div>
-				<div class="form-group">
-					<label for="">Quốc gia</label>
-					{!!Form::text('name',old('name'),array('class'=>'form-control'))!!}
-				</div>
-				<div class="form-group">
-					<label for="">Mô tả</label>
-					{!!Form::textarea('description',old('description'),array('class'=>'form-control'))!!}
-				</div>
-				<div class="form-margin">
-					<label for="">Kết hợp nhiều quốc gia</label>
-					<div>
-						<span class="inline-radio"><input type="radio" name="multi_countries" value="1" checked=""> <b>Có</b> </span>
-						<span class="inline-radio"><input type="radio" name="multi_countries" value="0" > <b>Không</b> </span>
-					</div>
-				</div>
-				<div class="form-margin">
-					<label for="">Hiển thị theo lựa chọn</label>
-					<div>
-						<span class="inline-radio"><input type="radio" name="home_show" value="1" checked=""> <b>Có</b> </span>
-						<span class="inline-radio"><input type="radio" name="home_show" value="0" > <b>Không</b> </span>
-					</div>
-				</div>
-				<div class="form-margin">
-					<label for="">Trạng thái</label>
-					<div>
-						<span class="inline-radio"><input type="radio" name="status" value="1" checked=""> <b>Active</b> </span>
-						<span class="inline-radio"><input type="radio" name="status" value="0" > <b>Deactive</b> </span>
-					</div>
-				</div>
-				<div class="form-margin">
-					<label for="img_banner">Hình Banner</label>
-					{!!Form::file('img-banner')!!}
-				</div>
-
-				<div class="form-margin">
-					<label for="img-banner-mobile">Hình Banner Mobile version</label>
-					{!!Form::file('img-banner-mobile')!!}
-				</div>
-
-				<div class="form-group">
-					{!!Form::submit('Save',array('class'=>'btn btn-primary'))!!}
-					<a href="{!!URL::previous()!!}" class="btn btn-primary">Back</a>
-				</div>
-			{!!Form::close()!!}
-		</div>
-	</div>
-</section>
+@section('link')
+    <button class="btn btn-primary" onclick="submitForm();">Save</button>
 @stop
 
-@section('script')
-<script>
+@section('title','Country')
 
-</script>
+@section('content')
+    <div class="row">
+      <div class="col-sm-12">
+        <form method="POST" action="{{route('admin.country.store')}}" id="form" role="form" class="form-horizontal">
+          {!! Form::token()!!}
+          <div class="form-group">
+            <label class="col-md-2 control-label">Title</label>
+            <div class="col-md-10">
+              <input type="text" required="" placeholder="Title" id="title" class="form-control" name="title">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label" for="description">Description</label>
+            <div class="col-md-10">
+              <textarea required="" class="form-control my-editor" placeholder="Description" rows="15" id="description" name="description"></textarea>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-2 control-label">Image:</label>
+            <div class="col-md-10">
+                <div class="input-group">
+                 <span class="input-group-btn">
+                   <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                     <i class="fa fa-picture-o"></i> Choose
+                   </a>
+                 </span>
+                 <input id="thumbnail" class="form-control" type="hidden" name="img_url">
+                </div>
+                <img id="holder" style="margin-top:15px;max-height:100px;">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+@endsection
+
+@section('script')
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script src="{{asset('public')}}/vendor/laravel-filemanager/js/lfm.js"></script>
+    <script src="{{asset('public/assets/admin/dist/js/script.js')}}"></script>
+    <script>
+        const url = "{{url('/')}}"
+        init_tinymce(url);
+        // BUTTON ALONE
+        init_btnImage(url,'#lfm');
+        // SUBMIT FORM
+        function submitForm(){
+         $('form').submit();
+        }
+    </script>
 @stop

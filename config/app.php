@@ -151,7 +151,8 @@ return [
         'Zizaco\Entrust\EntrustServiceProvider',
         'App\Modules\ModuleServiceProvider',
         'Ollieread\Multiauth\MultiauthServiceProvider',
-        'Ollieread\Multiauth\Passwords\PasswordResetServiceProvider'
+        'Ollieread\Multiauth\Passwords\PasswordResetServiceProvider',
+        'Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider'
 
 	],
 

@@ -27,6 +27,14 @@ abstract class BaseRepository implements RestfulInterface{
       {
           return $this->model->with($with);
       }
+
+      /*RETURN QUERY*/
+      public function query($columns = ['*'], $with=[])
+      {
+          $query = $this->make($with);
+          return $query->select($columns);
+      }
+
       /**
      	 * GET ALL
      	 *

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder {
 
@@ -12,18 +12,17 @@ class DatabaseSeeder extends Seeder {
 	 * @return void
 	 */
     protected $tables = [
-        'users',
-        'clients',
+//        'users',
+//        'clients',
         'countries',
-        'courses',
-        'promotions',
-        'testimonials',
+//        'courses',
+//        'promotions',
+//        'testimonials',
 
     ];
 
     protected $seeders = [
-        ProjectSeeder::class,
-        PhotoSeeder::class,
+        CountrySeeder::class,
     ];
 
     private function truncateDatabase()
@@ -42,9 +41,9 @@ class DatabaseSeeder extends Seeder {
          if(\DB::connection()->getName() === 'mysql'){
              $this->truncateDatabase();
          }
-//        foreach($this->seeders as $seeder){
-//            $this->call($seeder);
-//        }
+        foreach($this->seeders as $seeder){
+            $this->call($seeder);
+        }
         // $this->call(ProjectSeeder::class);
         Model::reguard();
     }

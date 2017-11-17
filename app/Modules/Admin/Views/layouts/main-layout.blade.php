@@ -28,11 +28,11 @@
     <script src="{{asset('/public/assets/admin')}}/dist/js/Chart.js"></script>
     <script>
       $(document).ready(function(){
-        $('.panel-body').mCustomScrollbar({
-            // scrollbarPosition: 'outside',
-            autoHideScrollbar: true,
-            scrollInertia: 250
-        })
+//        $('.panel-body').mCustomScrollbar({
+//            // scrollbarPosition: 'outside',
+//            autoHideScrollbar: true,
+//            scrollInertia: 250
+//        })
       })
     </script>
   </head>
