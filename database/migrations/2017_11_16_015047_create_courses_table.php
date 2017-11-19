@@ -19,12 +19,16 @@ class CreateCoursesTable extends Migration {
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
             $table->text('content')->nullable();
+            $table->string('code')->nullable();
             $table->string('age')->nullable();
             $table->string('time')->nullable();
             $table->text('schedule')->nullable();
             $table->string('img_url')->nullable();
             $table->integer('order')->default(1);
             $table->boolean('status')->default(1);
+            $table->string('m_keywords')->nullable();
+            $table->text('m_description')->nullable();
+            $table->string('m_img')->nullable();
             $table->integer('country_id')->unsigned();
             $table->foreign('country_id')->references('id')->on('countries')->onDelete('cascade');
 			$table->timestamps();

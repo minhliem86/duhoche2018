@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="description">Description</label>
                     <div class="col-md-10">
-                        <textarea class="form-control my-editor" placeholder="Description" rows="15"
+                        <textarea required="" class="form-control my-editor" placeholder="Description" rows="15"
                                   id="description"
                                   name="description">{!! old('description', $inst->description) !!}</textarea>
                     </div>

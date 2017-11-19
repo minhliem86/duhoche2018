@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder {
 //        'users',
 //        'clients',
         'countries',
-//        'courses',
+        'courses',
 //        'promotions',
 //        'testimonials',
 
@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder {
 
     protected $seeders = [
         CountrySeeder::class,
+        CourseSeeder::class,
     ];
 
     private function truncateDatabase()
@@ -37,14 +38,12 @@ class DatabaseSeeder extends Seeder {
     public function run()
     {
         Model::unguard();
-//         $this->call(UsersTableSeeder::class);
-         if(\DB::connection()->getName() === 'mysql'){
+        if(\DB::connection()->getName() === 'mysql'){
              $this->truncateDatabase();
          }
         foreach($this->seeders as $seeder){
             $this->call($seeder);
         }
-        // $this->call(ProjectSeeder::class);
         Model::reguard();
     }
 

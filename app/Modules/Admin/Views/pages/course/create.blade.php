@@ -9,20 +9,50 @@
 @section('content')
     <div class="row">
       <div class="col-sm-12">
-        <form method="POST" action="{{route('admin.country.store')}}" id="form" role="form" class="form-horizontal">
+        <form method="POST" action="{{route('admin.course.store')}}" id="form" role="form" class="form-horizontal">
           {!! Form::token()!!}
             <fieldset>
                 <legend class="col-md-offset-2 legend">Page Config</legend>
                 <div class="form-group">
                     <label class="col-md-2 control-label">Title</label>
                     <div class="col-md-10">
-                        <input type="text" required placeholder="Title" id="title" class="form-control" name="title">
+                        <input type="text" required="" placeholder="Title" id="title" class="form-control" name="title">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="description">Description</label>
+                    <label class="col-md-2 control-label" for="code">Code</label>
                     <div class="col-md-10">
-                        <textarea class="form-control my-editor" placeholder="Description" rows="15" id="description" name="description"></textarea>
+                        <input type="text" required="" placeholder="Code" id="code" class="form-control" name="code">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="age">Age</label>
+                    <div class="col-md-10">
+                        <input type="text" required="" placeholder="Age" id="age" class="form-control" name="age">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="time">Time</label>
+                    <div class="col-md-10">
+                        <input type="text" required="" placeholder="Time" id="time" class="form-control" name="time">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="description">Short Description</label>
+                    <div class="col-md-10">
+                        <textarea  class="form-control " placeholder="Description" rows="3" id="description" name="description"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="content">Content</label>
+                    <div class="col-md-10">
+                        <textarea required="" class="form-control my-editor" placeholder="Content" rows="15" id="content" name="content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="schedule">Schedule</label>
+                    <div class="col-md-10">
+                        <textarea required="" class="form-control my-editor" placeholder="Content" rows="15" id="schedule" name="schedule"></textarea>
                     </div>
                 </div>
                 <div class="form-group">
@@ -31,7 +61,7 @@
                         <div class="input-group">
                  <span class="input-group-btn">
                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                     <i class="fa fa-picture-o"></i> Avatar
+                     <i class="fa fa-picture-o"></i> Image
                    </a>
                  </span>
                             <input id="thumbnail" class="form-control" type="hidden" name="img_url">
@@ -55,11 +85,11 @@
                         <div class="form-group-addon">
                             <div class="input-group">
                              <span class="input-group-btn">
-                               <a id="lfm-meta" data-input="thumbnail" data-preview="meta-img-preview" class="btn btn-primary">
+                               <a id="lfm-meta" data-input="thumbnail2" data-preview="meta-img-preview" class="btn btn-primary">
                                  <i class="fa fa-picture-o"></i> Meta Image
                                </a>
                              </span>
-                                <input id="thumbnail" class="form-control" type="hidden" name="m_img">
+                                <input id="thumbnail2" class="form-control" type="hidden" name="m_img">
                             </div>
                             <img id="meta-img-preview" style="margin-top:15px;max-height:100px;">
                         </div>

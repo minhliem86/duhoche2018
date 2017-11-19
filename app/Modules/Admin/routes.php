@@ -36,5 +36,14 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers
         Route::post('country/AjaxUpdatePhoto', ['as' => 'admin.country.AjaxUpdatePhoto', 'uses' => 'CountryController@AjaxUpdatePhoto']);
         Route::post('country/updateStatus', ['as' => 'admin.country.updateStatus', 'uses' => 'CountryController@updateStatus']);
         Route::resource('/country','CountryController');
+
+        /*COURSE*/
+        Route::get('course/getAjax', ['as' => 'admin.course.getAjax', 'uses' => 'CourseController@getAjax']);
+        Route::post('course/deleteAll', ['as' => 'admin.course.deleteAll', 'uses' => 'CourseController@deleteAll']);
+        Route::post('course/postAjaxUpdateOrder', ['as' => 'admin.course.postAjaxUpdateOrder', 'uses' => 'CourseController@postAjaxUpdateOrder']);
+        Route::post('course/AjaxRemovePhoto', ['as' => 'admin.course.AjaxRemovePhoto', 'uses' => 'CourseController@AjaxRemovePhoto']);
+        Route::post('course/AjaxUpdatePhoto', ['as' => 'admin.course.AjaxUpdatePhoto', 'uses' => 'CourseController@AjaxUpdatePhoto']);
+        Route::post('course/updateStatus', ['as' => 'admin.course.updateStatus', 'uses' => 'CourseController@updateStatus']);
+        Route::resource('/course','CourseController');
     });
 });

@@ -152,7 +152,9 @@ return [
         'App\Modules\ModuleServiceProvider',
         'Ollieread\Multiauth\MultiauthServiceProvider',
         'Ollieread\Multiauth\Passwords\PasswordResetServiceProvider',
-        'Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider'
+        'Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider',
+        'Approached\LaravelImageOptimizer\ServiceProvider',
+        'Codingo\Dropzoner\DropzonerServiceProvider'
 
 	],
 

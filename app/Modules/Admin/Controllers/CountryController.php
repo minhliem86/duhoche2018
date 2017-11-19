@@ -79,7 +79,29 @@ class CountryController extends Controller {
 	 */
 	public function store(Request $request)
 	{
-
+        if($request->has('img_url')){
+            $img_url = $request->input('img_url');
+        }else{
+            $img_url = "";
+        }
+        if($request->has('meta_images')){
+            $meta_img = $request->input('m_img');
+        }else{
+            $meta_img = "";
+        }
+        $order = $this->country->getOrder();
+        $data = [
+            'title' => $request->input('title'),
+            'slug' => \LP_lib::unicode($request->input('title')),
+            'description' => $request->input('description'),
+            'm_keywords' => $request->input('m_keywords'),
+            'm_description' => $request->input('m_description'),
+            'm_img' => $meta_img,
+            'img_url' => $img_url,
+            'order' => $order,
+        ];
+        $product = $this->country->create($data);
+        return redirect()->route('admin.country.index')->with('success','Created !');
 	}
 
 	/**
@@ -101,7 +123,8 @@ class CountryController extends Controller {
 	 */
 	public function edit($id)
 	{
-
+        $inst = $this->country->find($id,['*']);
+        return view('Admin::pages.country.edit', compact('inst'));
 	}
 
 	/**
@@ -110,9 +133,23 @@ class CountryController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update(Request $request, $id)
 	{
-		//
+        $img_url = $request->input('img_url');
+        $meta_image = $request->input('m_img');
+        $data = [
+            'title' => $request->input('title'),
+            'slug' => \LP_lib::unicode($request->input('title')),
+            'description' => $request->input('description'),
+            'm_keywords' => $request->input('m_keywords'),
+            'm_description' => $request->input('m_description'),
+            'm_img' => $meta_image,
+            'img_url' => $img_url,
+            'order' => $request->input('order'),
+            'status' => $request->input('status'),
+        ];
+        $product = $this->country->update($data, $id);
+        return redirect()->route('admin.country.index')->with('success', 'Updated !');
 	}
 
 	/**
