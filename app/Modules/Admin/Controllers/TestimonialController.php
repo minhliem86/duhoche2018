@@ -4,21 +4,17 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use App\Repositories\CourseRepository;
-use App\Repositories\CountryRepository;
+use App\Repositories\TestimonialRepository;
 use yajra\Datatables\Datatables;
-use DB;
+use App\Models\Media;
 
-class CourseController extends Controller
-{
+class TestimonialController extends Controller {
 
-    protected $course;
-    protected $country;
+    protected $testimonial;
 
-    public function __construct(CourseRepository $course, CountryRepository $country)
+    public function __construct(TestimonialRepository $testimonial)
     {
-        $this->course = $course;
-        $this->country = $country;
+        $this->testimonial = $testimonial;
     }
 
     /**
@@ -28,25 +24,27 @@ class CourseController extends Controller
      */
     public function index()
     {
-        return view('Admin::pages.course.index');
+        return view('Admin::pages.testimonial.index');
     }
 
     public function getAjax(Request $request)
     {
-        $data = DB::table('courses')->join('countries', 'countries.id', '=', 'courses.country_id')->select('courses.id as id ', 'courses.title as title', 'courses.img_url as img_url','courses.code as code', 'countries.title as country_title', 'courses.order as order', 'courses.status as status');
+        $column = ["id",'author', 'img_url', "title", 'order', 'status'];
+        $data = $this->testimonial->query($column);
         $datatable = Datatables::of($data)
-            ->editColumn('img_url', function ($data) {
-                return '<img src=" ' . $data->img_url . ' " width="80" class="img-responsive" />';
+
+            ->editColumn('img_url',function($data){
+                return '<img src=" '.$data->img_url.' " width="80" class="img-responsive" />';
             })
-            ->addColumn('action', function ($data) {
-                $route_edit = route('admin.course.edit', $data->id);
-                $route_destroy = route('admin.course.destroy', $data->id);
+            ->addColumn('action', function($data) {
+                $route_edit = route('admin.testimonial.edit',$data->id);
+                $route_destroy = route('admin.testimonial.destroy', $data->id);
                 return view('Admin::datatables.action', compact('data', 'route_edit', 'route_destroy'))->render();
             })
-            ->editColumn('order', function ($data) {
+            ->editColumn('order', function($data) {
                 return "<input type='text' name='order' class='form-control' data-id= '" . $data->id . "' value= '" . $data->order . "' />";
             })
-            ->editColumn('status', function ($data) {
+            ->editColumn('status', function($data){
                 $status = $data->status ? 'checked' : '';
                 $data_id = $data->id;
                 return '
@@ -56,9 +54,9 @@ class CourseController extends Controller
               </label>
           ';
             })
-            ->filter(function ($query) use ($request) {
+            ->filter(function($query) use ($request) {
                 if ($request->has('name')) {
-                    $query->where('courses.title', 'like', "%{$request->input('name')}%");
+                    $query->where('author', 'like', "%{$request->input('name')}%");
                 }
             });
         return $datatable->make(true);
@@ -72,8 +70,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        $country = $this->country->lists('title','id');
-        return view('Admin::pages.course.create', compact('country'));
+        return view('Admin::pages.testimonial.create');
     }
 
     /**
@@ -83,42 +80,37 @@ class CourseController extends Controller
      */
     public function store(Request $request)
     {
-        if ($request->has('img_url')) {
+        if($request->has('img_url')){
             $img_url = $request->input('img_url');
-        } else {
+        }else{
             $img_url = "";
         }
-        if ($request->has('meta_images')) {
+        if($request->has('meta_images')){
             $meta_img = $request->input('m_img');
-        } else {
+        }else{
             $meta_img = "";
         }
-        $order = $this->course->getOrder();
+        $order = $this->testimonial->getOrder();
         $data = [
+            'author' => $request->input('author'),
+            'slug' => \LP_lib::unicode($request->input('author')),
             'title' => $request->input('title'),
-            'slug' => \LP_lib::unicode($request->input('title')),
-            'code' => $request->input('code'),
             'description' => $request->input('description'),
-            'content' => $request->input('content'),
-            'age' => $request->input('age'),
-            'time' => $request->input('time'),
-            'schedule' => $request->input('schedule'),
             'm_keywords' => $request->input('m_keywords'),
             'm_description' => $request->input('m_description'),
             'm_img' => $meta_img,
             'img_url' => $img_url,
             'order' => $order,
-            'country_id' => $request->input('country_id'),
-
         ];
-        $product = $this->course->create($data);
-        return redirect()->route('admin.course.index')->with('success', 'Created !');
+        $testimonial = $this->testimonial->create($data);
+
+        return redirect()->route('admin.testimonial.index')->with('success','Created !');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function show($id)
@@ -129,67 +121,63 @@ class CourseController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function edit($id)
     {
-        $inst = $this->course->find($id, ['*']);
-        $country = $this->country->lists('title','id');
-        return view('Admin::pages.course.edit', compact('inst', 'country'));
+        $inst = $this->testimonial->find($id,['*']);
+        return view('Admin::pages.testimonial.edit', compact('inst'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function update(Request $request, $id)
     {
         $img_url = $request->input('img_url');
         $meta_image = $request->input('m_img');
+
         $data = [
+            'author' => $request->input('author'),
+            'slug' => \LP_lib::unicode($request->input('author')),
             'title' => $request->input('title'),
-            'slug' => \LP_lib::unicode($request->input('title')),
-            'code' => $request->input('code'),
             'description' => $request->input('description'),
-            'content' => $request->input('content'),
-            'age' => $request->input('age'),
-            'time' => $request->input('time'),
-            'schedule' => $request->input('schedule'),
             'm_keywords' => $request->input('m_keywords'),
             'm_description' => $request->input('m_description'),
             'm_img' => $meta_image,
             'img_url' => $img_url,
             'order' => $request->input('order'),
             'status' => $request->input('status'),
-            'country_id' => $request->input('country_id'),
         ];
-        $product = $this->course->update($data, $id);
-        return redirect()->route('admin.course.index')->with('success', 'Updated !');
+        $testimonial = $this->testimonial->update($data, $id);
+
+        return redirect()->route('admin.testimonial.index')->with('success', 'Updated !');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int $id
+     * @param  int  $id
      * @return Response
      */
     public function destroy($id)
     {
-        $this->course->delete($id);
-        return redirect()->route('admin.course.index')->with('success', 'Deleted !');
+        $this->testimonial->delete($id);
+        return redirect()->route('admin.testimonial.index')->with('success', 'Deleted !');
     }
 
     /*DELETE ALL*/
     public function deleteAll(Request $request)
     {
-        if (!$request->ajax()) {
+        if(!$request->ajax()){
             abort(404);
-        } else {
+        }else{
             $data = $request->arr;
-            $response = $this->course->deleteAll($data);
+            $response = $this->testimonial->deleteAll($data);
             return response()->json(['msg' => 'ok']);
         }
     }
@@ -197,35 +185,36 @@ class CourseController extends Controller
     /*UPDATE ORDER*/
     public function postAjaxUpdateOrder(Request $request)
     {
-        if (!$request->ajax()) {
+        if(!$request->ajax())
+        {
             abort('404', 'Not Access');
-        } else {
+        }else{
             $data = $request->input('data');
-            foreach ($data as $k => $v) {
-                $upt = [
+            foreach($data as $k => $v){
+                $upt  =  [
                     'order' => $v,
                 ];
-                $obj = $this->course->find($k);
+                $obj = $this->testimonial->find($k);
                 $obj->update($upt);
             }
-            return response()->json(['msg' => 'ok', 'code' => 200], 200);
+            return response()->json(['msg' =>'ok', 'code'=>200], 200);
         }
     }
 
     /*CHANGE STATUS*/
     public function updateStatus(Request $request)
     {
-        if (!$request->ajax()) {
+        if(!$request->ajax()){
             abort('404', 'Not Access');
-        } else {
+        }else{
             $value = $request->input('value');
             $id = $request->input('id');
-            $cate = $this->course->find($id);
+            $cate = $this->testimonial->find($id);
             $cate->status = $value;
             $cate->save();
             return response()->json([
                 'mes' => 'Updated',
-                'error' => false,
+                'error'=> false,
             ], 200);
         }
     }

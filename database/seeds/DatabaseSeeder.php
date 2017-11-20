@@ -15,15 +15,18 @@ class DatabaseSeeder extends Seeder {
 //        'users',
 //        'clients',
         'countries',
+        'media',
         'courses',
-//        'promotions',
-//        'testimonials',
+        'promotions',
+        'testimonials',
 
     ];
 
     protected $seeders = [
         CountrySeeder::class,
         CourseSeeder::class,
+        TestimonialSeeder::class,
+        PromotionSeeder::class,
     ];
 
     private function truncateDatabase()

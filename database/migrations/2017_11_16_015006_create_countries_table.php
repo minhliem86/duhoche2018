@@ -20,6 +20,7 @@ class CreateCountriesTable extends Migration {
 			$table->string('code')->nullable();
 			$table->text('description')->nullable();
 			$table->string('img_url')->nullable();
+			$table->string('video_url')->nullable();
 			$table->integer('order')->default(1);
 			$table->boolean('status')->default(1);
 			$table->string('m_keywords')->nullable();

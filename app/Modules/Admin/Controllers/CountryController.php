@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Repositories\CountryRepository;
 use yajra\Datatables\Datatables;
+use App\Models\Media;
 
 class CountryController extends Controller {
 
@@ -96,11 +97,20 @@ class CountryController extends Controller {
             'description' => $request->input('description'),
             'm_keywords' => $request->input('m_keywords'),
             'm_description' => $request->input('m_description'),
+            'video_url' => $request->input('video_url'),
             'm_img' => $meta_img,
             'img_url' => $img_url,
             'order' => $order,
         ];
-        $product = $this->country->create($data);
+        $country = $this->country->create($data);
+
+        if($request->has('img_banner01'))
+        {
+            $media = new Media();
+            $media->img_url = $request->input('img_banner01');
+            $country->media()->save($media);
+        }
+
         return redirect()->route('admin.country.index')->with('success','Created !');
 	}
 
@@ -137,18 +147,27 @@ class CountryController extends Controller {
 	{
         $img_url = $request->input('img_url');
         $meta_image = $request->input('m_img');
+
         $data = [
             'title' => $request->input('title'),
             'slug' => \LP_lib::unicode($request->input('title')),
             'description' => $request->input('description'),
             'm_keywords' => $request->input('m_keywords'),
             'm_description' => $request->input('m_description'),
+            'video_url' => $request->input('video_url'),
             'm_img' => $meta_image,
             'img_url' => $img_url,
             'order' => $request->input('order'),
             'status' => $request->input('status'),
         ];
         $product = $this->country->update($data, $id);
+
+        $media_id = $product->media->first() ? $product->media->first()->id : null;
+        if($media_id){
+            $media_obj = Media::find($media_id);
+            $media_obj->img_url = $request->input('img_banner01');
+            $media_obj->save();
+        }
         return redirect()->route('admin.country.index')->with('success', 'Updated !');
 	}
 

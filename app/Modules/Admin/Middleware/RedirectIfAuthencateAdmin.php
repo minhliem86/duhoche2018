@@ -22,7 +22,7 @@ class RedirectIfAuthencateAdmin {
 
 	public function handle($request, Closure $next)
 	{
-        if ($this->auth->check())
+        if ($this->auth->check() && !$this->auth->get()->hasRole('Admin'))
         {
             return new RedirectResponse(url('/admin/dashboard'));
         }

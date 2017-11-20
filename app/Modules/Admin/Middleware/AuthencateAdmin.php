@@ -21,7 +21,7 @@ class AuthencateAdmin {
 
     public function handle($request, Closure $next)
 	{
-        if ($this->auth->guest())
+        if ($this->auth->guest() || !$this->auth->get()->hasRole('Admin'))
         {
             if ($request->ajax())
             {

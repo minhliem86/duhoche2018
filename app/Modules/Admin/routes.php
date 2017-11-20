@@ -28,6 +28,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers
             return view('Admin::pages.dashboard.index');
         }]);
 
+        //   PORFILE
+        Route::get('/profile', ['as' => 'admin.profile.index', 'uses' => 'ProfileController@index']);
+
         /*COUNTRY*/
         Route::get('country/getAjax', ['as' => 'admin.country.getAjax', 'uses' => 'CountryController@getAjax']);
         Route::post('country/deleteAll', ['as' => 'admin.country.deleteAll', 'uses' => 'CountryController@deleteAll']);
@@ -45,5 +48,32 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers
         Route::post('course/AjaxUpdatePhoto', ['as' => 'admin.course.AjaxUpdatePhoto', 'uses' => 'CourseController@AjaxUpdatePhoto']);
         Route::post('course/updateStatus', ['as' => 'admin.course.updateStatus', 'uses' => 'CourseController@updateStatus']);
         Route::resource('/course','CourseController');
+
+        /*TESTIMONIAL*/
+        Route::get('testimonial/getAjax', ['as' => 'admin.testimonial.getAjax', 'uses' => 'TestimonialController@getAjax']);
+        Route::post('testimonial/deleteAll', ['as' => 'admin.testimonial.deleteAll', 'uses' => 'TestimonialController@deleteAll']);
+        Route::post('testimonial/postAjaxUpdateOrder', ['as' => 'admin.testimonial.postAjaxUpdateOrder', 'uses' => 'TestimonialController@postAjaxUpdateOrder']);
+        Route::post('testimonial/AjaxRemovePhoto', ['as' => 'admin.testimonial.AjaxRemovePhoto', 'uses' => 'TestimonialController@AjaxRemovePhoto']);
+        Route::post('testimonial/AjaxUpdatePhoto', ['as' => 'admin.testimonial.AjaxUpdatePhoto', 'uses' => 'TestimonialController@AjaxUpdatePhoto']);
+        Route::post('testimonial/updateStatus', ['as' => 'admin.testimonial.updateStatus', 'uses' => 'TestimonialController@updateStatus']);
+        Route::resource('/testimonial','TestimonialController');
+
+        /*TESTIMONIAL*/
+        Route::get('testimonial/getAjax', ['as' => 'admin.testimonial.getAjax', 'uses' => 'TestimonialController@getAjax']);
+        Route::post('testimonial/deleteAll', ['as' => 'admin.testimonial.deleteAll', 'uses' => 'TestimonialController@deleteAll']);
+        Route::post('testimonial/postAjaxUpdateOrder', ['as' => 'admin.testimonial.postAjaxUpdateOrder', 'uses' => 'TestimonialController@postAjaxUpdateOrder']);
+        Route::post('testimonial/AjaxRemovePhoto', ['as' => 'admin.testimonial.AjaxRemovePhoto', 'uses' => 'TestimonialController@AjaxRemovePhoto']);
+        Route::post('testimonial/AjaxUpdatePhoto', ['as' => 'admin.testimonial.AjaxUpdatePhoto', 'uses' => 'TestimonialController@AjaxUpdatePhoto']);
+        Route::post('testimonial/updateStatus', ['as' => 'admin.testimonial.updateStatus', 'uses' => 'TestimonialController@updateStatus']);
+        Route::resource('/testimonial','TestimonialController');
+
+        /*PROMOTION*/
+        Route::get('promotion/getAjax', ['as' => 'admin.promotion.getAjax', 'uses' => 'PromotionController@getAjax']);
+        Route::post('promotion/deleteAll', ['as' => 'admin.promotion.deleteAll', 'uses' => 'PromotionController@deleteAll']);
+        Route::post('promotion/postAjaxUpdateOrder', ['as' => 'admin.promotion.postAjaxUpdateOrder', 'uses' => 'PromotionController@postAjaxUpdateOrder']);
+        Route::post('promotion/AjaxRemovePhoto', ['as' => 'admin.promotion.AjaxRemovePhoto', 'uses' => 'PromotionController@AjaxRemovePhoto']);
+        Route::post('promotion/AjaxUpdatePhoto', ['as' => 'admin.promotion.AjaxUpdatePhoto', 'uses' => 'PromotionController@AjaxUpdatePhoto']);
+        Route::post('promotion/updateStatus', ['as' => 'admin.promotion.updateStatus', 'uses' => 'PromotionController@updateStatus']);
+        Route::resource('/promotion','PromotionController');
     });
 });

@@ -21,8 +21,7 @@ class TestimonialSeeder extends Seeder {
 				'title' => $faker->sentence,
 				'author' => $faker->name,
 				'description' => $faker->paragraph,
-				'content' => $faker->text,
-				'img_avatar' => $faker->imageUrl('480','480','cats'),
+				'img_url' => $faker->imageUrl('480','480','cats'),
 				'status' => 1,
 				'order' => $i,
 			]);

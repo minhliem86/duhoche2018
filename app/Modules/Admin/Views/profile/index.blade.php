@@ -31,7 +31,7 @@
                                     <p class="title">Name:</p>
                                 </td>
                                 <td>
-                                    <p>{{Auth::user()->name}}</p>
+                                    <p>{{Auth::admin()->get()->name}}</p>
                                 </td>
                             </tr>
                             <tr>
@@ -39,7 +39,7 @@
                                     <p class="title">Email:</p>
                                 </td>
                                 <td>
-                                    <p>{{Auth::user()->email}}</p>
+                                    <p>{{Auth::admin()->get()->email}}</p>
                                 </td>
                             </tr>
                             <tr>
@@ -47,31 +47,31 @@
                                     <p class="title">Create Date:</p>
                                 </td>
                                 <td>
-                                    <p>{{date_format(Auth::user()->created_at, 'd-m-Y')}}</p>
+                                    <p>{{date_format(Auth::admin()->get()->created_at, 'd-m-Y')}}</p>
                                 </td>
                             </tr>
                         </table>
 
                     </div>
                     <div class="tab-pane fade" id="changePass">
-                        {{Form::open(['route' =>[ 'admin.changePass.postChangePass'], 'class' =>'form-changepass'  ] )}}
+                        {!!  Form::open(['route' =>[ 'admin.changePass.postChangePass'], 'class' =>'form-changepass'  ] )!!}
                             <div class="form-group">
                                 <label for="old_password">Old Password</label>
-                                {{Form::password('old_password', ['class'=>'form-control', 'id' =>'old_password' ])}}
+                                {!!  Form::password('old_password', ['class'=>'form-control', 'id' =>'old_password' ])!!}
                             </div>
                             <div class="form-group">
                                 <label for="new_password">New Password</label>
-                                {{Form::password('new_password', ['class'=>'form-control', 'id' =>'new_password' ])}}
+                                {!!  Form::password('new_password', ['class'=>'form-control', 'id' =>'new_password' ])!!}
                             </div>
                             <div class="form-group">
                                 <label for="new_password_confirm">New Password Confirmation</label>
-                                {{Form::password('new_password_confirmation', ['class'=>'form-control', 'id' =>'new_password_confirm' ])}}
+                                {!!  Form::password('new_password_confirmation', ['class'=>'form-control', 'id' =>'new_password_confirm' ])!!}
                             </div>
                             <div class="form-group">
                                 <button class="btn btn-primary" type="submit">Change Password</button>
                             </div>
 
-                        {{Form::close()}}
+                        {!!  Form::close()!!}
                     </div>
                 </div>
           </div>

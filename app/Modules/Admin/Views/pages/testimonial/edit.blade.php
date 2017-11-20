@@ -5,18 +5,18 @@
     <button class="btn btn-primary" onclick="submitForm();">Save Changes</button>
 @stop
 
-@section('title','Course Edit')
+@section('title','Testimonial')
 
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            {!!Form::model($inst, ['route'=>['admin.course.update',$inst->id], 'method'=>'put' ])  !!}
+            {!!Form::model($inst, ['route'=>['admin.testimonial.update',$inst->id], 'method'=>'put' ])  !!}
             <fieldset>
                 <legend class="legend">Page Config</legend>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Country</label>
+                    <label class="col-md-2 control-label">Author</label>
                     <div class="col-md-10">
-                        {!! Form::select('country_id', ['' => 'Select a Country'] + $country,old($inst->country_id),['class' => 'form-control']) !!}
+                        {!! Form::text('author',old('author'), ['class' => 'form-control', 'required']) !!}
                     </div>
                 </div>
                 <div class="form-group">
@@ -26,41 +26,11 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="code">Code</label>
+                    <label class="col-md-2 control-label" for="description">Description</label>
                     <div class="col-md-10">
-                        {!! Form::text('code',old('code'), ['class' => 'form-control']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="age">Age</label>
-                    <div class="col-md-10">
-                        {!! Form::text('age',old('age'), ['class' => 'form-control']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="time">Time</label>
-                    <div class="col-md-10">
-                        {!! Form::text('time',old('time'), ['class' => 'form-control']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="description">Short Description</label>
-                    <div class="col-md-10">
-                        <textarea  class="form-control " placeholder="Description" rows="3" id="description" name="description">{!! old('description', $inst->description) !!}</textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="description">Content</label>
-                    <div class="col-md-10">
-                        <textarea required="" class="form-control my-editor" placeholder="Content" rows="15"
-                                  id="content"
-                                  name="content">{!! old('content', $inst->content) !!}</textarea>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="schedule">Schedule</label>
-                    <div class="col-md-10">
-                        <textarea required="" class="form-control my-editor" placeholder="Content" rows="15" id="schedule" name="schedule">{!! old('schedule', $inst->schedule) !!}</textarea>
+                        <textarea required="" class="form-control my-editor" placeholder="Description" rows="15"
+                                  id="description"
+                                  name="description">{!! old('description', $inst->description) !!}</textarea>
                     </div>
                 </div>
                 <div class="form-group">

@@ -18,6 +18,8 @@ class CreateMediaTable extends Migration {
 			$table->integer('mediable_id');
 			$table->string('mediable_type');
 			$table->string('type')->nullable();
+			$table->string('img_url')->nullable();
+			$table->string('text_caption')->nullable();
 			$table->timestamps();
 		});
 	}

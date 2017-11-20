@@ -4,7 +4,7 @@
     <button class="btn btn-primary" onclick="submitForm();">Save</button>
 @stop
 
-@section('title','Country')
+@section('title','Course')
 
 @section('content')
     <div class="row">
@@ -12,7 +12,13 @@
         <form method="POST" action="{{route('admin.course.store')}}" id="form" role="form" class="form-horizontal">
           {!! Form::token()!!}
             <fieldset>
-                <legend class="col-md-offset-2 legend">Page Config</legend>
+                <legend class="legend">Page Config</legend>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Country</label>
+                    <div class="col-md-10">
+                        {!! Form::select('country_id', ['' => 'Select a Country'] + $country,old('country_id'),['class' => 'form-control']) !!}
+                    </div>
+                </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label">Title</label>
                     <div class="col-md-10">
@@ -72,7 +78,7 @@
             </fieldset>
 
             <fieldset>
-                <legend class="col-md-offset-2 legend">FB-ADS Config</legend>
+                <legend class="legend">FB-ADS Config</legend>
                 <div class="form-group">
                     <label class="col-md-2 control-label">META Configuration</label>
                     <div class="col-md-10">

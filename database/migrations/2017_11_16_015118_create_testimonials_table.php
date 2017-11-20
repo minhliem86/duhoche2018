@@ -19,6 +19,7 @@ class CreateTestimonialsTable extends Migration {
             $table->string('title')->nullable();
             $table->text('description')->nullable();
             $table->string('img_url')->nullable();
+            $table->string('img_avatar')->nullable();
             $table->integer('order')->default(1);
             $table->boolean('status')->default(1);
             $table->string('m_keywords')->nullable();

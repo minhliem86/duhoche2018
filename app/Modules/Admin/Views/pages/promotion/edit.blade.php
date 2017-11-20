@@ -5,12 +5,12 @@
     <button class="btn btn-primary" onclick="submitForm();">Save Changes</button>
 @stop
 
-@section('title','Country')
+@section('title','Promotion')
 
 @section('content')
     <div class="row">
         <div class="col-sm-12">
-            {!!Form::model($inst, ['route'=>['admin.country.update',$inst->id], 'method'=>'put' ])  !!}
+            {!!Form::model($inst, ['route'=>['admin.promotion.update',$inst->id], 'method'=>'put' ])  !!}
             <fieldset>
                 <legend class="legend">Page Config</legend>
                 <div class="form-group">
@@ -22,7 +22,7 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="description">Description</label>
                     <div class="col-md-10">
-                        <textarea class="form-control my-editor" placeholder="Description" rows="15"
+                        <textarea required="" class="form-control my-editor" placeholder="Description" rows="15"
                                   id="description"
                                   name="description">{!! old('description', $inst->description) !!}</textarea>
                     </div>
@@ -43,12 +43,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Video</label>
-                    <div class="col-md-10">
-                        {!! Form::text('video_url',old('video_url'), ['class' => 'form-control', 'required']) !!}
-                    </div>
-                </div>
-                <div class="form-group">
                     <label class="col-md-2 control-label">Image:</label>
                     <div class="col-md-10">
                         <div class="input-group">
@@ -61,50 +55,6 @@
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;"
                              src="{!! !empty($inst->img_url) ? asset($inst->img_url) : ''!!}">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Banner Image:</label>
-                    <div class="col-md-10">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <a id="lfm-banner01" data-input="thumbnail-banner" data-preview="banner01-preview" class="btn btn-primary">
-                                    <i class="fa fa-picture-o"></i> Image
-                                </a>
-                            </span>
-                            {!!Form::hidden('img_banner01',old('img_banner01'), ['class'=>'form-control', 'id'=>'thumbnail-banner' ])!!}
-                        </div>
-                        <img id="banner01-preview" style="margin-top:15px;max-height:100px;"
-                             src="{!! !empty($inst->media->first()) ? asset($inst->media->first()->img_url) : '' !!}" >
-                    </div>
-                </div>
-            </fieldset>
-
-            <fieldset>
-                <legend class="legend">FB-ADS Config</legend>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">META Configuration</label>
-                    <div class="col-md-10">
-                        <div class="form-group-addon">
-                            {!! Form::text('m_keywords',old('m_keywords'), ['class' => 'form-control', 'Placeholder' => 'Meta Keywords']) !!}
-                        </div>
-                        <div class="form-group-addon">
-                            <textarea class="form-control" placeholder="Meta Description" rows="3"
-                                      name="m_description">{!!old('m_description', $inst->m_description)!!}</textarea>
-                        </div>
-                        <div class="form-group-addon">
-                            <div class="input-group">
-                             <span class="input-group-btn">
-                               <a id="lfm-meta" data-input="thumbnail2" data-preview="meta-img-preview"
-                                  class="btn btn-primary">
-                                 <i class="fa fa-picture-o"></i> Meta Image
-                               </a>
-                             </span>
-                                {!!Form::hidden('m_img',old('m_img'), ['class'=>'form-control', 'id'=>'thumbnail2' ])!!}
-                            </div>
-                            <img id="meta-img-preview" style="margin-top:15px;max-height:100px;"
-                                 src="{!!!empty($inst->m_img) ? asset($inst->m_img) : ''!!}">
-                        </div>
                     </div>
                 </div>
             </fieldset>
@@ -122,10 +72,6 @@
         init_tinymce(url);
         // BUTTON ALONE
         init_btnImage(url, '#lfm');
-        /*IMAGE META*/
-        init_btnImage(url, '#lfm-meta');
-        /*IMAGE META*/
-        init_btnImage(url, '#lfm-banner01');
 
         // SUBMIT FORM
         function submitForm() {

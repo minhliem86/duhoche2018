@@ -18,10 +18,9 @@ class PromotionSeeder extends Seeder {
 		$faker = Faker::create();
 		for($i = 1; $i<=5 ; $i++){
 			DB::table('promotions')->insert([
-				'name' => $faker->sentence,
+				'title' => $faker->sentence,
 				'description' => $faker->paragraph,
-				'content' => $faker->text,
-				'img_avatar' => $faker->imageUrl('480','480','cats'),
+				'img_url' => $faker->imageUrl('480','480','cats'),
 				'status' => 1,
 				'order' => $i,
 			]);
