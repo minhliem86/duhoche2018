@@ -37,12 +37,26 @@
                         <div class="input-group">
                  <span class="input-group-btn">
                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                     <i class="fa fa-picture-o"></i> Image
+                     <i class="fa fa-picture-o"></i> Choose
                    </a>
                  </span>
                             <input id="thumbnail" class="form-control" type="hidden" name="img_url">
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Image 80x80:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                             <span class="input-group-btn">
+                               <a id="lfm-80x80" data-input="thumbnail80x80" data-preview="thumbnail80x80-preview" class="btn btn-primary">
+                                 <i class="fa fa-picture-o"></i> Choose
+                               </a>
+                             </span>
+                            <input id="thumbnail80x80" class="form-control" type="hidden" name="img_avatar">
+                        </div>
+                        <img id="thumbnail80x80-preview" style="margin-top:15px;max-height:100px;">
                     </div>
                 </div>
             </fieldset>
@@ -87,6 +101,8 @@
         init_tinymce(url);
         // BUTTON ALONE
         init_btnImage(url,'#lfm');
+        /*IMAGE 80x80*/
+        init_btnImage(url,'#lfm-80x80');
         // SUBMIT FORM
         function submitForm(){
          $('form').submit();

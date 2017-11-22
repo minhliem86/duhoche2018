@@ -12,4 +12,9 @@ class CountryRepository extends BaseRepository implements RestfulInterface{
         return get_class(new Country);
     }
   // END
+
+    public function getComposer($columns=['*'])
+    {
+        return $this->model->where('status',1)->get($columns);
+    }
 }

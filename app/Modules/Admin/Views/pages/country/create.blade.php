@@ -37,7 +37,7 @@
                         <div class="input-group">
                  <span class="input-group-btn">
                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                     <i class="fa fa-picture-o"></i> Image
+                     <i class="fa fa-picture-o"></i> Choose
                    </a>
                  </span>
                             <input id="thumbnail" class="form-control" type="hidden" name="img_url">
@@ -46,12 +46,26 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-2 control-label">Image 540x355:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <a id="lfm-540x355" data-input="thumbnail-540x355" data-preview="540x355-preview" class="btn btn-primary">
+                                    <i class="fa fa-picture-o"></i> Choose
+                                </a>
+                            </span>
+                            <input id="thumbnail-540x355" class="form-control" type="hidden" name="img_540x355">
+                        </div>
+                        <img id="540x355-preview" style="margin-top:15px;max-height:100px;">
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-2 control-label">Banner Image:</label>
                     <div class="col-md-10">
                         <div class="input-group">
                             <span class="input-group-btn">
                                 <a id="lfm-banner01" data-input="thumbnail-banner" data-preview="banner01-preview" class="btn btn-primary">
-                                    <i class="fa fa-picture-o"></i> Image
+                                    <i class="fa fa-picture-o"></i> Choose
                                 </a>
                             </span>
                             <input id="thumbnail-banner" class="form-control" type="hidden" name="img_banner01">
@@ -109,5 +123,7 @@
         init_btnImage(url,'#lfm-meta');
         /*IMAGE BANNER*/
         init_btnImage(url,'#lfm-banner01');
+        /*IMAGE 540x355*/
+        init_btnImage(url,'#lfm-540x355');
     </script>
 @stop

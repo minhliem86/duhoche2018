@@ -21,6 +21,7 @@ class CourseSeeder extends Seeder {
 				'title' => $faker->name,
 				'description' => $faker->paragraph,
 				'content' => $faker->paragraph,
+				'content_column2' => $faker->paragraph,
 				'code' => $faker->countryCode,
 				'time' => $faker->dateTime(),
 				'schedule' => $faker->randomHtml(2,3),

@@ -54,13 +54,28 @@
                         <div class="input-group">
                          <span class="input-group-btn">
                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                             <i class="fa fa-picture-o"></i> Avatar
+                             <i class="fa fa-picture-o"></i> Choose
                            </a>
                          </span>
                             {!!Form::hidden('img_url',old('img_url'), ['class'=>'form-control', 'id'=>'thumbnail' ])!!}
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;"
                              src="{!! !empty($inst->img_url) ? asset($inst->img_url) : ''!!}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Image 80x80:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                         <span class="input-group-btn">
+                           <a id="lfm-80x80" data-input="thumbnail80x80" data-preview="thumbnail80x80-preview" class="btn btn-primary">
+                             <i class="fa fa-picture-o"></i> Choose
+                           </a>
+                         </span>
+                            {!!Form::hidden('img_avatar',old('img_avatar'), ['class'=>'form-control', 'id'=>'thumbnail80x80' ])!!}
+                        </div>
+                        <img id="holder" style="margin-top:15px;max-height:100px;"
+                             src="{!! !empty($inst->img_avatar) ? asset($inst->img_avatar) : ''!!}">
                     </div>
                 </div>
             </fieldset>
@@ -109,6 +124,8 @@
         init_btnImage(url, '#lfm');
         /*IMAGE META*/
         init_btnImage(url, '#lfm-meta');
+        /*IMAGE 80x80*/
+        init_btnImage(url,'#lfm-80x80');
 
         // SUBMIT FORM
         function submitForm() {

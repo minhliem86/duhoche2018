@@ -56,6 +56,12 @@
                     </div>
                 </div>
                 <div class="form-group">
+                    <label class="col-md-2 control-label" for="content_column2">Content Column 2</label>
+                    <div class="col-md-10">
+                        <textarea required="" class="form-control my-editor" placeholder="Content Column 2" rows="15" id="content_column2" name="content_column2"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
                     <label class="col-md-2 control-label" for="schedule">Schedule</label>
                     <div class="col-md-10">
                         <textarea required="" class="form-control my-editor" placeholder="Content" rows="15" id="schedule" name="schedule"></textarea>

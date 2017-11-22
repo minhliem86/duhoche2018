@@ -34,7 +34,7 @@ class CountryController extends Controller {
         $datatable = Datatables::of($data)
 
             ->editColumn('img_url',function($data){
-                return '<img src=" '.$data->img_url.' " width="80" class="img-responsive" />';
+                return '<img src=" '.asset($data->img_url).' " width="80" class="img-responsive" />';
             })
             ->addColumn('action', function($data) {
                 $route_edit = route('admin.country.edit',$data->id);
@@ -108,6 +108,14 @@ class CountryController extends Controller {
         {
             $media = new Media();
             $media->img_url = $request->input('img_banner01');
+            $media->type = 'banner';
+            $country->media()->save($media);
+        }
+        if($request->has('img_540x355'))
+        {
+            $media = new Media();
+            $media->img_url = $request->input('img_540x355');
+            $media->type = '540x355';
             $country->media()->save($media);
         }
 
@@ -160,13 +168,20 @@ class CountryController extends Controller {
             'order' => $request->input('order'),
             'status' => $request->input('status'),
         ];
-        $product = $this->country->update($data, $id);
+        $country = $this->country->update($data, $id);
 
-        $media_id = $product->media->first() ? $product->media->first()->id : null;
-        if($media_id){
-            $media_obj = Media::find($media_id);
+        $media_banner = $country->media()->where('type','banner')->first() ? $country->media->where('type','banner')->first()->id : null;
+        if($media_banner){
+            $media_obj = Media::find($media_banner);
             $media_obj->img_url = $request->input('img_banner01');
             $media_obj->save();
+        }
+        $media_540x355 = $country->media()->where('type','540x355')->first() ? $country->media->where('type','540x355')->first()->id : null;
+        if($media_540x355)
+        {
+            $media = Media::find($media_540x355);
+            $media->img_url = $request->input('img_540x355');
+            $media->save();
         }
         return redirect()->route('admin.country.index')->with('success', 'Updated !');
 	}

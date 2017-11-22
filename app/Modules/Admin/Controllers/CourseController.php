@@ -36,7 +36,7 @@ class CourseController extends Controller
         $data = DB::table('courses')->join('countries', 'countries.id', '=', 'courses.country_id')->select('courses.id as id ', 'courses.title as title', 'courses.img_url as img_url','courses.code as code', 'countries.title as country_title', 'courses.order as order', 'courses.status as status');
         $datatable = Datatables::of($data)
             ->editColumn('img_url', function ($data) {
-                return '<img src=" ' . $data->img_url . ' " width="80" class="img-responsive" />';
+                return '<img src=" ' . asset($data->img_url) . ' " width="80" class="img-responsive" />';
             })
             ->addColumn('action', function ($data) {
                 $route_edit = route('admin.course.edit', $data->id);
@@ -100,6 +100,7 @@ class CourseController extends Controller
             'code' => $request->input('code'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
+            'content_column2' => $request->input('content_column2'),
             'age' => $request->input('age'),
             'time' => $request->input('time'),
             'schedule' => $request->input('schedule'),
@@ -155,6 +156,7 @@ class CourseController extends Controller
             'code' => $request->input('code'),
             'description' => $request->input('description'),
             'content' => $request->input('content'),
+            'content_column2' => $request->input('content_column2'),
             'age' => $request->input('age'),
             'time' => $request->input('time'),
             'schedule' => $request->input('schedule'),

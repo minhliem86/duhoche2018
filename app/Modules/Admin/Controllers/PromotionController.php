@@ -34,7 +34,7 @@ class promotionController extends Controller {
         $datatable = Datatables::of($data)
 
             ->editColumn('img_url',function($data){
-                return '<img src=" '.$data->img_url.' " width="80" class="img-responsive" />';
+                return '<img src=" '.asset($data->img_url).' " width="80" class="img-responsive" />';
             })
             ->addColumn('action', function($data) {
                 $route_edit = route('admin.promotion.edit',$data->id);
