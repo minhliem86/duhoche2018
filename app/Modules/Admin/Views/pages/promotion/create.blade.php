@@ -29,14 +29,28 @@
                     <label class="col-md-2 control-label">Image:</label>
                     <div class="col-md-10">
                         <div class="input-group">
-                 <span class="input-group-btn">
-                   <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                     <i class="fa fa-picture-o"></i> Image
-                   </a>
-                 </span>
+                         <span class="input-group-btn">
+                           <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
+                             <i class="fa fa-picture-o"></i> Image
+                           </a>
+                         </span>
                             <input id="thumbnail" class="form-control" type="hidden" name="img_url">
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Cirlce Image 257x257:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                         <span class="input-group-btn">
+                           <a id="lfm-cirlce" data-input="thumbnail2" data-preview="holder2" class="btn btn-primary">
+                             <i class="fa fa-picture-o"></i> Choose
+                           </a>
+                         </span>
+                            <input id="thumbnail2" class="form-control" type="hidden" name="img_homepage">
+                        </div>
+                        <img id="holder2" style="margin-top:15px;max-height:100px;">
                     </div>
                 </div>
             </fieldset>
@@ -54,6 +68,8 @@
         init_tinymce(url);
         // BUTTON ALONE
         init_btnImage(url,'#lfm');
+        // BUTTON ALONE
+        init_btnImage(url,'#lfm-cirlce');
         // SUBMIT FORM
         function submitForm(){
          $('form').submit();

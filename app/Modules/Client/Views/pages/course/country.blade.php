@@ -24,34 +24,39 @@
     <!-- **************** Wellcome ****************-->
     <section class="destination-main clearfix">
         <div class="container">
-            <h2>ILA DU HỌC MỸ 2018</h2>
+            <h2>ILA DU HỌC {!! $country->title !!} 2018</h2>
+            @if(!$course->isEmpty())
             <div class="destination-main-container">
                 <div class="container-fluid">
+                    @foreach($course->chunk(3) as $item_chunk)
                     <div class="row">
-                        <div class="col-xs-12 col-sm-6 col-md-4">
+                        @foreach($item_chunk as $item_course)
+                        <div class="col-sm-4">
                             <div class="box-destination box-active">
                                 <div class="content-destination">
                                     <div class="box-destination-header">
-                                        <h4>LOS ANGELES + SAN FRANCISCO</h4>
-                                        <a href="#">Dành cho học sinh từ 14 - 17 tuổi</a>
-                                        <a href="#">Ngày khởi hành: 02/07 – 22/07/2017</a>
+                                        <h4>{!! $item_course->title !!}</h4>
+                                        <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}">Dành cho học sinh từ {!! $item_course->age !!} tuổi</a>
+                                        <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}">Ngày khởi hành: {!! $item_course->time !!}</a>
                                     </div>
                                     <div class="box-destination-content">
                                         <div class="box-destination-footer">
-                                            <button class="btn">Read more</button>
-                                            <button class="btn-02">Register</button>
+                                            <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}" class="btn">Xem thêm</a>
+                                            <a href="#" class="btn-02">Đăng ký</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-destination">
-                                    <img src="{!!asset('public/assets/frontend') !!}/images/LOSANGELES-LASVEGAS2.jpg" class="img-responsive" alt="">
+                                    <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}"><img src="{!!asset($item_course->img_url) !!}" class="img-responsive" alt="{!! $item_course->title !!}"></a>
                                 </div>
                             </div>
                         </div>
-
+                        @endforeach
                     </div>
+                    @endforeach
                 </div>
             </div>
+            @endif
 
         </div>
     </section>

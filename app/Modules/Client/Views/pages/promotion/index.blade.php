@@ -13,55 +13,27 @@
                 <div class="col-md-12">
                     <h2>CHƯƠNG TRÌNH KHUYẾN MÃI</h2>
                 </div>
-                <div class="col-md-6">
-                    <div class="promotion-container">
-                        <div class="img-box">
-                            <img src="{!! asset('public/assets/frontend') !!}/images/1486453613_dangkysom-slide.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="promotion-box">
-                            <h3>PROMOTION<br>UT ALIQUAM IPSUM DORA </h3>
-                            <p>Cover each side of the cucumber with one jar of ground beef.</p>
-                            <a href="#" class="btn">Đăng Ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="promotion-container">
-                        <div class="img-box">
-                            <img src="{!! asset('public/assets/frontend') !!}/images/1486453613_dangkysom-slide.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="promotion-box">
-                            <h3>PROMOTION<br>UT ALIQUAM IPSUM DORA </h3>
-                            <p>Cover each side of the cucumber with one jar of ground beef.</p>
-                            <a href="#" class="btn">Đăng Ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="promotion-container">
-                        <div class="img-box">
-                            <img src="{!! asset('public/assets/frontend') !!}/images/1486453613_dangkysom-slide.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="promotion-box">
-                            <h3>PROMOTION<br>UT ALIQUAM IPSUM DORA </h3>
-                            <p>Cover each side of the cucumber with one jar of ground beef.</p>
-                            <a href="#" class="btn">Đăng Ký</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="promotion-container">
-                        <div class="img-box">
-                            <img src="{!! asset('public/assets/frontend') !!}/images/1486453613_dangkysom-slide.jpg" class="img-responsive" alt="">
-                        </div>
-                        <div class="promotion-box">
-                            <h3>PROMOTION<br>UT ALIQUAM IPSUM DORA </h3>
-                            <p>Cover each side of the cucumber with one jar of ground beef.</p>
-                            <a href="#" class="btn">Đăng Ký</a>
-                        </div>
-                    </div>
-                </div>
             </div>
+            @if(!$promotion->isEmpty())
+                @foreach($promotion->chunk(2) as $item_chunk)
+                <div class="row">
+                    @foreach($item_chunk as $item_promotion)
+                        <div class="col-md-6">
+                            <div class="promotion-container animate" data-animate="zoomIn">
+                                <div class="img-box">
+                                    <img src="{!! asset($item_promotion->img_url) !!}" class="img-responsive" alt="{!! $item_promotion->title !!}">
+                                </div>
+                                <div class="promotion-box">
+                                    <h3>{!! $item_promotion->title !!}</h3>
+                                    <p>{!! $item_promotion->description !!}</p>
+                                    <a href="#" class="btn">Đăng Ký</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+                @endforeach
+            @endif
         </div>
     </section>
 

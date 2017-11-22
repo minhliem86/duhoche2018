@@ -4,12 +4,21 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Repositories\PromotionRepository;
 
 class PromotionController extends Controller {
 
-	public function index()
+    protected $promotion;
+
+    public function __construct(PromotionRepository $promotion)
     {
-        return view('Client::pages.promotion.index');
+        $this->promotion = $promotion;
+    }
+
+    public function index()
+    {
+        $promotion = $this->promotion->getHomePage(['img_url', 'title', 'description'], 4);
+        return view('Client::pages.promotion.index', compact('promotion'));
     }
 
 }

@@ -599,6 +599,8 @@ div.promotion-bottom{
     background:rgba(255,255,255,0.5);
     padding:10px;
     color:#050d9e;
+    width:80%;
+    border-radius: 15px 0 8px 0;
 }
 
 .testtimanial-slider-item h4{

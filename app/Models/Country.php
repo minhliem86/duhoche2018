@@ -13,4 +13,9 @@ class Country extends Model {
         return $this->morphMany('App\Models\Media', 'mediable');
     }
 
+    public function courses()
+    {
+        return $this->hasMany('App\Models\Course');
+    }
+
 }

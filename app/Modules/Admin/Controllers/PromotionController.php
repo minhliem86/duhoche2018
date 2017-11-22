@@ -85,12 +85,18 @@ class promotionController extends Controller {
         }else{
             $img_url = "";
         }
+        if($request->has('img_homepage')){
+            $img_circle = $request->input('img_homepage');
+        }else{
+            $img_circle = "";
+        }
         $order = $this->promotion->getOrder();
         $data = [
             'title' => $request->input('title'),
             'slug' => \LP_lib::unicode($request->input('title')),
             'description' => $request->input('description'),
             'img_url' => $img_url,
+            'img_homepage' => $img_circle,
             'order' => $order,
         ];
         $promotion = $this->promotion->create($data);
@@ -130,6 +136,7 @@ class promotionController extends Controller {
     public function update(Request $request, $id)
     {
         $img_url = $request->input('img_url');
+        $img_circle = $request->input('img_homepage');
         $meta_image = $request->input('m_img');
 
         $data = [
@@ -137,6 +144,7 @@ class promotionController extends Controller {
             'slug' => \LP_lib::unicode($request->input('title')),
             'description' => $request->input('description'),
             'img_url' => $img_url,
+            'img_homepage' => $img_circle,
             'order' => $request->input('order'),
             'status' => $request->input('status'),
         ];

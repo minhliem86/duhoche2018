@@ -48,13 +48,28 @@
                         <div class="input-group">
                          <span class="input-group-btn">
                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                             <i class="fa fa-picture-o"></i> Avatar
+                             <i class="fa fa-picture-o"></i> Choose
                            </a>
                          </span>
                             {!!Form::hidden('img_url',old('img_url'), ['class'=>'form-control', 'id'=>'thumbnail' ])!!}
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;"
                              src="{!! !empty($inst->img_url) ? asset($inst->img_url) : ''!!}">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Circle Image 257x257:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                         <span class="input-group-btn">
+                           <a id="lfm-cirlce" data-input="thumbnail2" data-preview="holder2" class="btn btn-primary">
+                             <i class="fa fa-picture-o"></i> Choose
+                           </a>
+                         </span>
+                            {!!Form::hidden('img_homepage',old('img_homepage'), ['class'=>'form-control', 'id'=>'thumbnail2' ])!!}
+                        </div>
+                        <img id="holder2" style="margin-top:15px;max-height:100px;"
+                             src="{!! $inst->img_homepage ? asset($inst->img_homepage) : ''!!}">
                     </div>
                 </div>
             </fieldset>
@@ -72,12 +87,13 @@
         init_tinymce(url);
         // BUTTON ALONE
         init_btnImage(url, '#lfm');
+        // BUTTON ALONE
+        init_btnImage(url,'#lfm-cirlce');
 
         // SUBMIT FORM
         function submitForm() {
             $('form').submit();
         }
-
         $(document).ready(function () {
             $('radio[name="status"]').change(function () {
 

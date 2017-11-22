@@ -16,31 +16,31 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-15">
-                                    <div class="each-welcome each">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
                                         <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
                                         <p class="title title-inner-section">Mở rộng tầm nhìn</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
-                                    <div class="each-welcome each">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s">
                                         <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
                                         <p class="title title-inner-section">Mở rộng tầm nhìn</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
-                                    <div class="each-welcome each">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s">
                                         <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
                                         <p class="title title-inner-section">Mở rộng tầm nhìn</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
-                                    <div class="each-welcome each">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.4s">
                                         <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
                                         <p class="title title-inner-section">Mở rộng tầm nhìn</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
-                                    <div class="each-welcome each">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.5s">
                                         <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
                                         <p class="title title-inner-section">Mở rộng tầm nhìn</p>
                                     </div>
@@ -58,7 +58,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2>ĐIỂM LẠI DU HỌC HÈ 2017</h2>
+                    <h2 class="animate" data-animate="fadeInUp">ĐIỂM LẠI DU HỌC HÈ 2017</h2>
                     <div class="review-container">
                         <div class="video-wrapper">
 
@@ -84,7 +84,7 @@
                                     @if(!$promotion->isEmpty())
                                         @foreach($promotion as $item_promotion)
                                         <div class="col-sm-3">
-                                            <div class="each-promotion each">
+                                            <div class="each-promotion each animate" data-animate="fadeInUp" data-duration="1.0s" >
                                                 <img src="{!! asset($item_promotion->img_url) !!}" class="img-responsive img-inner-section" alt="{!! $item_promotion->title !!}">
                                                 <p class="title title-inner-section">
                                                     {!! $item_promotion->title !!}</span>
@@ -116,7 +116,7 @@
                                     @if(!$testimonial->isEmpty())
                                         @foreach($testimonial as $item_testimonial)
                                         <div class="col-sm-6">
-                                            <div class="each-testi each">
+                                            <div class="each-testi each animate" data-animate="zoomIn">
                                                 <img src="{!!asset($item_testimonial->img_url) !!}" class="img-responsive img-inner-section" alt="{!! $item_testimonial->author !!}">
                                                 <div class="content">
                                                     <h4 class="author">{!! $item_testimonial->author !!}</h4>

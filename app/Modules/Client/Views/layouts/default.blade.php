@@ -23,6 +23,7 @@
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <!-- Custom Css -->
     <link rel="stylesheet" href="public/assets/frontend/css/swiper.css">
+    <link rel="stylesheet" href="public/assets/frontend/css/animate.min.css">
     <link href="{!!asset('public') !!}/assets/frontend/css/style.css" rel="stylesheet">
     <link href="{!!asset('public') !!}/assets/frontend/css/reponsive.css" rel="stylesheet">
     <link href="{!!asset('public') !!}/assets/frontend/css/custom-lp.css" rel="stylesheet">
@@ -50,6 +51,7 @@
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery.validate.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/swiper.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery.sticky.js"></script>
+    <script src="{!!asset('public') !!}/assets/frontend/js/scrolla.jquery.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/customScript.js"></script>
     <!-- REVOLUTION -->
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/js/revolution/css/settings.css">

@@ -137,5 +137,10 @@ $(document).ready(function () {
         })
     });
 
+    $('.animate').scrolla({
+        mobile: false,
+        once: true,
+    })
+
 
 });

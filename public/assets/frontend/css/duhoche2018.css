@@ -25,6 +25,7 @@
     width: 20%;
     float: left; } }
 header {
+  padding: 15px 0;
   position: relative; }
   header .topmenu {
     margin-top: 20px; }

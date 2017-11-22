@@ -9,33 +9,29 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="">ILA DU HỌC Mỹ</h2>
-                    <p class="title-sub">Mã đoàn: LA LV</p>
+                    <h2>ILA DU HỌC {!! $country->title !!}</h2>
+                    <p class="title-sub">Mã đoàn: {!! $course->code !!}</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-7">
                     <div class="wrap-content">
-                        <h4>LOREM IPSUM DOLOR CONSE <br>CTETUR ADIPISCING ELIT SIT AMET</h4>
-                        <p>Nulla faucibus sem ipsum, sed solli citudin eros maximus  non. Suspendisse pharetra varius felis, non scelerisque lorem imperdiet in. Ut porta id diam at tempus. Donec viverra sodales volutpat. In viverra ligula sit amet magna blandit rutrum. Aliquam lobortis felis sed nisD</p>
-                        <p>Nulla faucibus sem ipsum, sed solli citudin eros maximus  non. Suspendisse pharetra varius felis,</p>
+                        {!! $course->content !!}
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="img-box">
-                        <img src="images/img-course-detail-01.png" alt="">
+                        <img src="{!! $course->img_url !!}" class="img-responsive" alt="{!! $course->title !!}">
                     </div>
                     <div class="content-2">
-                        <h4>LOREM IPSUM DOLOR CONSE <br>CTETUR ADIPISCING ELIT SIT AMET</h4>
-                        <p>Nulla faucibus sem ipsum, sed solli citudin eros maximus  non. Suspendisse pharetra varius felis, non scelerisque lorem imperdiet in. Ut porta id diam at tempus. Donec viverra sodales volutpat. In viverra ligula sit amet magna blandit rutrum. Aliquam lobortis felis sed nisD</p>
-                        <p>Nulla faucibus sem ipsum, sed solli citudin eros maximus  non. Suspendisse pharetra varius felis,</p>
+                        {!! $course->content_column2 !!}
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="wrap-schedule">
-
+                        {!! $course->schedule !!}
                     </div>
                 </div>
             </div>

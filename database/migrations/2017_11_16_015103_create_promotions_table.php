@@ -19,6 +19,7 @@ class CreatePromotionsTable extends Migration {
             $table->string('slug')->nullable();
             $table->text('description')->nullable();
             $table->string('img_url')->nullable();
+            $table->string('img_homepage')->nullable();
             $table->integer('order')->default(1);
             $table->boolean('status')->default(1);
 			$table->timestamps();

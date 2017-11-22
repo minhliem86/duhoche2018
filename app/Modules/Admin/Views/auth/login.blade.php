@@ -50,18 +50,7 @@
         <div class="form-group">
           <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
         </div>
-        @if($errors->any())
-            <div class="alert alert-danger">
-              @foreach ($errors->all() as $error)
-                <p>{{$error}}</p>
-              @endforeach
-            </div>
-        @endif
-        @if(Session::has('success'))
-            <div class="alert alert-success">
-                <p>{{Session::get('success')}}</p>
-            </div>
-        @endif
+   
         <div class="form-group">
 
         </div>

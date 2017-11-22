@@ -207,7 +207,8 @@ return [
         'Html' => 'Collective\Html\HtmlFacade',
         'DataTables' => 'yajra\Datatables\Facades\DataTables',
         'Image' => 'Intervention\Image\Facades\Image',
-        'Entrust'   => 'Zizaco\Entrust\EntrustFacade'
+        'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
+        'Str' => 'Illuminate\Support\Str'
 
 	],
 
