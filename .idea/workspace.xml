@@ -6,40 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9df48136-32f2-4b2d-831d-c66b7681a272" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/testimonial/deatail.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/frontend/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/frontend/js/scrolla.jquery.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/myLib/Mobile_Detect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Country.php" afterPath="$PROJECT_DIR$/app/Models/Country.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Models/Promotion.php" afterPath="$PROJECT_DIR$/app/Models/Promotion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Admin/Controllers/PromotionController.php" afterPath="$PROJECT_DIR$/app/Modules/Admin/Controllers/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Admin/Views/auth/login.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Admin/Views/auth/login.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Admin/Views/pages/promotion/create.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Admin/Views/pages/promotion/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Admin/Views/pages/promotion/edit.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Admin/Views/pages/promotion/edit.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Controllers/CourseController.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Controllers/CourseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Controllers/PromotionController.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Controllers/PromotionController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Controllers/TestimonialController.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Controllers/TestimonialController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/default.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/default.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/header.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/header.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/why.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/layouts/why.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/pages/course/country.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/course/country.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/pages/course/course.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/course/course.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/pages/home/index.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/home/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/pages/promotion/index.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/promotion/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/Views/pages/testimonial/index.blade.php" afterPath="$PROJECT_DIR$/app/Modules/Client/Views/pages/testimonial/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Modules/Client/routes.php" afterPath="$PROJECT_DIR$/app/Modules/Client/routes.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" afterPath="$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/migrations/2017_11_16_015103_create_promotions_table.php" afterPath="$PROJECT_DIR$/database/migrations/2017_11_16_015103_create_promotions_table.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/css/custom-lp.css" afterPath="$PROJECT_DIR$/public/assets/frontend/css/custom-lp.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/css/duhoche2018.css" afterPath="$PROJECT_DIR$/public/assets/frontend/css/duhoche2018.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/css/duhoche2018.css.map" afterPath="$PROJECT_DIR$/public/assets/frontend/css/duhoche2018.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/css/style.css" afterPath="$PROJECT_DIR$/public/assets/frontend/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/js/customScript.js" afterPath="$PROJECT_DIR$/public/assets/frontend/js/customScript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/assets/frontend/sass/duhoche2018.scss" afterPath="$PROJECT_DIR$/public/assets/frontend/sass/duhoche2018.scss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,7 +23,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/assets/frontend/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
+            <state relative-caret-position="8194">
               <caret line="482" column="23" lean-forward="false" selection-start-line="482" selection-start-column="23" selection-end-line="482" selection-end-column="23" />
               <folding />
             </state>
@@ -66,7 +33,7 @@
       <file leaf-file-name="country.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/pages/course/country.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
+            <state relative-caret-position="833">
               <caret line="49" column="223" lean-forward="false" selection-start-line="49" selection-start-column="223" selection-end-line="49" selection-end-column="223" />
               <folding />
             </state>
@@ -86,8 +53,8 @@
       <file leaf-file-name="CourseController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Modules/Client/Controllers/CourseController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="32" column="152" lean-forward="false" selection-start-line="32" selection-start-column="152" selection-end-line="32" selection-end-column="152" />
+            <state relative-caret-position="356">
+              <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
               <folding>
                 <element signature="e#49#71#0#PHP" expanded="true" />
               </folding>
@@ -98,7 +65,7 @@
       <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/layouts/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="311">
+            <state relative-caret-position="510">
               <caret line="30" column="90" lean-forward="false" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
               <folding />
             </state>
@@ -108,7 +75,7 @@
       <file leaf-file-name="BaseRepository.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
+            <state relative-caret-position="1564">
               <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
               <folding />
             </state>
@@ -118,7 +85,7 @@
       <file leaf-file-name="course.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/pages/course/course.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="561">
               <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding />
             </state>
@@ -243,7 +210,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1296" />
@@ -451,27 +418,26 @@
       <workItem from="1511229195329" duration="4000" />
       <workItem from="1511235614152" duration="6352000" />
       <workItem from="1511317294148" duration="26070000" />
-      <workItem from="1511361418858" duration="7990000" />
+      <workItem from="1511361418858" duration="8506000" />
+      <workItem from="1511410801192" duration="455000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142103000" />
+    <option name="totallyTimeSpent" value="143074000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20948827" sideWeight="0.50574714" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20948827" sideWeight="0.49425286" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21162046" sideWeight="0.49425286" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24593717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24593717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20948827" sideWeight="0.50574714" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -479,6 +445,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -538,7 +505,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="75" column="7" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="81" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -553,7 +519,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="19" column="43" lean-forward="true" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -563,9 +528,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#35#60#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -573,9 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="75" lean-forward="false" selection-start-line="14" selection-start-column="75" selection-end-line="14" selection-end-column="75" />
-          <folding>
-            <element signature="e#32#71#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -590,7 +549,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -606,7 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="46" column="17" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -614,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="407">
           <caret line="70" column="8" lean-forward="false" selection-start-line="70" selection-start-column="8" selection-end-line="71" selection-end-column="41" />
-          <folding>
-            <element signature="e#2687#2728#0#HTML" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -624,7 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="64" column="63" lean-forward="true" selection-start-line="64" selection-start-column="63" selection-end-line="64" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -632,7 +585,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="21" column="40" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -640,9 +592,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="146" column="25" lean-forward="false" selection-start-line="146" selection-start-column="13" selection-end-line="146" selection-end-column="25" />
-          <folding>
-            <marker date="1511361906693" expanded="true" signature="1735:1913" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -650,7 +599,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -668,7 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="5" lean-forward="false" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -676,7 +623,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -684,7 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -692,7 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1240">
           <caret line="210" column="41" lean-forward="true" selection-start-line="210" selection-start-column="41" selection-end-line="210" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,7 +644,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -708,7 +651,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -716,7 +658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
           <caret line="602" column="27" lean-forward="false" selection-start-line="602" selection-start-column="27" selection-end-line="602" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -734,7 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="509">
           <caret line="41" column="116" lean-forward="false" selection-start-line="41" selection-start-column="116" selection-end-line="41" selection-end-column="116" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -742,7 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="36" column="74" lean-forward="true" selection-start-line="36" selection-start-column="74" selection-end-line="36" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -750,7 +689,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="713">
           <caret line="53" column="80" lean-forward="false" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -758,7 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -766,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="206">
           <caret line="1138" column="28" lean-forward="false" selection-start-line="1138" selection-start-column="20" selection-end-line="1138" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -782,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
           <caret line="141" column="18" lean-forward="false" selection-start-line="141" selection-start-column="18" selection-end-line="141" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -798,13 +732,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="20" column="39" lean-forward="false" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/layouts/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
+        <state relative-caret-position="510">
           <caret line="30" column="90" lean-forward="false" selection-start-line="30" selection-start-column="90" selection-end-line="30" selection-end-column="90" />
           <folding />
         </state>
@@ -814,13 +747,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="24" lean-forward="false" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/pages/course/country.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
+        <state relative-caret-position="833">
           <caret line="49" column="223" lean-forward="false" selection-start-line="49" selection-start-column="223" selection-end-line="49" selection-end-column="223" />
           <folding />
         </state>
@@ -836,7 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/assets/frontend/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
+        <state relative-caret-position="8194">
           <caret line="482" column="23" lean-forward="false" selection-start-line="482" selection-start-column="23" selection-end-line="482" selection-end-column="23" />
           <folding />
         </state>
@@ -846,7 +778,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -868,7 +799,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Repositories/Eloquent/BaseRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
+        <state relative-caret-position="1564">
           <caret line="93" column="21" lean-forward="false" selection-start-line="93" selection-start-column="21" selection-end-line="93" selection-end-column="21" />
           <folding />
         </state>
@@ -876,7 +807,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Modules/Client/Views/pages/course/course.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="561">
           <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding />
         </state>
@@ -884,8 +815,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Modules/Client/Controllers/CourseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="152" lean-forward="false" selection-start-line="32" selection-start-column="152" selection-end-line="32" selection-end-column="152" />
+        <state relative-caret-position="356">
+          <caret line="28" column="46" lean-forward="true" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
           <folding>
             <element signature="e#49#71#0#PHP" expanded="true" />
           </folding>
