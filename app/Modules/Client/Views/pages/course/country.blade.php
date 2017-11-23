@@ -13,7 +13,7 @@
                     <h2>ĐIỂM LẠI DU HỌC HÈ 2017</h2>
                     <div class="review-container">
                         <div class="video-wrapper">
-
+                            <div data-type="youtube" data-video-id="gHSbes0tXaQ"></div>
                         </div>
                     </div>
                 </div>
@@ -35,19 +35,19 @@
                             <div class="box-destination box-active">
                                 <div class="content-destination">
                                     <div class="box-destination-header">
-                                        <h4>{!! $item_course->title !!}</h4>
-                                        <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}">Dành cho học sinh từ {!! $item_course->age !!} tuổi</a>
+                                        <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}"><h4>{!! $item_course->title !!}</h4></a>
+                                        <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}">Dành cho học sinh {!! $item_course->age !!}</a>
                                         <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}">Ngày khởi hành: {!! $item_course->time !!}</a>
                                     </div>
                                     <div class="box-destination-content">
                                         <div class="box-destination-footer">
-                                            <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}" class="btn">Xem thêm</a>
-                                            <a href="#" class="btn-02">Đăng ký</a>
+                                            <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}" class="btn xemthem">Xem thêm</a>
+                                            <a href="#" class="btn-02 dk">Đăng ký</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="bg-destination">
-                                    <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}"><img src="{!!asset($item_course->img_url) !!}" class="img-responsive" alt="{!! $item_course->title !!}"></a>
+                                    <img src="{!!asset($item_course->img_url) !!}" class="img-responsive" alt="{!! $item_course->title !!}">
                                 </div>
                             </div>
                         </div>
@@ -68,5 +68,12 @@
 @stop
 
 @section("script")
-
+    <link rel="stylesheet" href="{!! asset('public/assets/frontend') !!}/js/video/plyr.css">
+    <script src="{!! asset('public/assets/frontend') !!}/js/video/plyr.js"></script>
+    <script>
+        $(document).ready(function(){
+            /*INITIAL VIDEO*/
+            plyr.setup();
+        })
+    </script>
 @stop

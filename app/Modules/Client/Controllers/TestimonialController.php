@@ -5,14 +5,17 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Repositories\TestimonialRepository;
+use App\Repositories\CourseRepository;
 
 class TestimonialController extends Controller {
 
     protected $testimonial;
+    protected $course;
 
-    public function __construct(TestimonialRepository $testimonial)
+    public function __construct(TestimonialRepository $testimonial, CourseRepository $course)
     {
         $this->testimonial = $testimonial;
+        $this->course = $course;
     }
 
     public function index()
@@ -26,8 +29,9 @@ class TestimonialController extends Controller {
     {
         if($slug){
             $testmonial_detail = $this->testimonial->findByField('slug', $slug,['img_url', 'author', 'description' ])->first();
-            dd($testmonial_detail);
-            return view('Client::pages.testimonial.detail');
+            $testimonial = $this->testimonial->findWhereNotIn('slug', [$slug], ['img_avatar', 'author', 'slug', 'description']);
+            $random_country = $this->course->randomCourse(['id', 'title', 'slug','country_id'], 5, ['countries']);
+            return view('Client::pages.testimonial.detail', compact('testimonial', 'testmonial_detail', 'random_country'));
         }else{
             return redirect()->route('testimonial');
         }

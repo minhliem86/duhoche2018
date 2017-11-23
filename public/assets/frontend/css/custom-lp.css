@@ -25,9 +25,8 @@ div.inner-section.inner-reg{
 }
 
 div.promotion-bottom{
-    position: relative;
-    background: url(../images/img-promotion-02.png) no-repeat;
-    height: 150px;
+    background: url(../images/bg-promotion.jpg) no-repeat;
+    background-size:cover;
     position:relative;
 }
 .promotion-bottom .wrap-promo-bottom{

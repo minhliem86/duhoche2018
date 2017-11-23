@@ -112,6 +112,11 @@ section p.title-inner-section {
   text-align: center;
   color: #2b328c;
   font-weight: 600; }
+  section p.title-inner-section span {
+    display: block; }
+    @media screen and (max-width: 768px) {
+      section p.title-inner-section span {
+        display: inline-block; } }
 @media screen and (max-width: 768px) {
   section .each {
     margin-bottom: 20px; } }
@@ -137,10 +142,16 @@ section p.title-inner-section {
     width: 100%;
     max-width: 235px;
     height: 160px; }
+    @media screen and (max-width: 768px) {
+      .discover .discover-container div.img-hack.hack-style01 {
+        max-width: 100%; } }
   .discover .discover-container div.img-hack.hack-style02 {
     width: 100%;
     max-width: 375px;
     height: 250px; }
+    @media screen and (max-width: 768px) {
+      .discover .discover-container div.img-hack.hack-style02 {
+        max-width: 100%; } }
 
 /*WHYCHOOSEIAL*/
 .whychooseila {
@@ -156,6 +167,9 @@ section p.title-inner-section {
     .each-location {
       min-height: auto;
       margin-bottom: 20px; } }
+  .each-location a.tel {
+    text-decoration: none;
+    color: #2b328c; }
 
 /*END*/
 /*DESTINATION PAGE*/
@@ -165,6 +179,41 @@ section p.title-inner-section {
     margin: 0;
     padding: 0;
     margin-bottom: 10px; }
+.content-destination .box-destination-content .box-destination-footer a {
+  text-align: center; }
+.content-destination .box-destination-content .box-destination-footer a.xemthem {
+  color: white;
+  margin-right: 10px; }
+  .content-destination .box-destination-content .box-destination-footer a.xemthem:hover {
+    color: #2b328c; }
+  @media screen and (max-width: 768px) {
+    .content-destination .box-destination-content .box-destination-footer a.xemthem {
+      margin-right: 0; } }
+
+/*COURSE*/
+.course-detail-main .img-box {
+  margin-bottom: 40px; }
+  @media screen and (max-width: 768px) {
+    .course-detail-main .img-box {
+      margin-bottom: 20px; } }
+.course-detail-main .wrap-schedule {
+  margin-top: 30px; }
+  .course-detail-main .wrap-schedule table {
+    margin-bottom: 30px; }
+    @media screen and (max-width: 768px) {
+      .course-detail-main .wrap-schedule table {
+        overflow-x: auto;
+        display: block; } }
+  .course-detail-main .wrap-schedule table tr:first-child, .course-detail-main .wrap-schedule table tr td:first-child {
+    background: #ffcb05; }
+  .course-detail-main .wrap-schedule table tr:first-child td:first-child {
+    background: #2b328c; }
+  .course-detail-main .wrap-schedule table tr td {
+    padding: 15px; }
+.course-detail-main .wrap-content h3.title-course {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px; }
 
 /*PROMOTION PAGE*/
 .promotion-content .promotion-container {
@@ -178,17 +227,6 @@ section p.title-inner-section {
       margin-bottom: 20px;
       text-transform: capitalize; }
 
-.promotion-bar {
-  background: -moz-linear-gradient(left, #2b328c 0%, #2b328c 51%, #ffcb05 54%, #ffcb05 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(left, #2b328c 0%, #2b328c 51%, #ffcb05 54%, #ffcb05 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right, #2b328c 0%, #2b328c 51%, #ffcb05 54%, #ffcb05 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
-  .promotion-bar .promotion-bottom {
-    margin-bottom: 20px;
-    background-image: url(../images/img-promotion-02.png); }
-
 section.promotion-bar {
   padding: 0 !important;
   margin-bottom: 20px;
@@ -200,7 +238,7 @@ section.promotion-bar {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ }
   section.promotion-bar .promotion-bottom {
     margin-bottom: 0;
-    background-image: url(../images/img-promotion-02.png); }
+    background-image: url(../images/bg-promotion.jpg); }
 
 /*TESTIMONIAL PAGE*/
 section.testtimonial .testimonial-container {
@@ -282,6 +320,13 @@ section.testtimonial .testimonial-container {
     @media screen and (max-width: 992px) {
       section.testtimonial .testimonial-container .right-testimonial {
         flex: 1; } }
+
+/*TESTIMONIAL DETAIL*/
+.testtimonial-list-item .testi-list-content h4 {
+  font-size: 16px;
+  font-weight: 600; }
+.testtimonial-list-item .testi-list-content p {
+  font-size: 14px; }
 
 /*COURSE DETAIL PAGE*/
 section.course-detail-main h2 {

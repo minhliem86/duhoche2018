@@ -3,16 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:description" content="ILA Du Học giới thiệu chương trình Du Học Hè 2017 với 4 giá trị cốt lõi: Phiêu Lưu, Trải Nghiệm, Tự Lập và Trưởng Thành." >
-
+    <meta property="og:description" content="ILA Du Học giới thiệu chương trình Du Học Hè 2018 với 4 giá trị cốt lõi: Phiêu Lưu, Trải Nghiệm, Tự Lập và Trưởng Thành." >
+    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
     @yield('meta')
-    <meta property="og:image" content="http://ila-duhoc.edu.vn/duhoche2017{!!asset('public') !!}/assets/frontend/images/fb-share.png">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="315">
-
-    <meta name="keywords" content="du học hè, du học hè 2018, ila du học hè">
-    <meta name="description" content="Chương trình Du Học Hè 2018 với 4 giá trị cốt lõi: Phiêu Lưu, Trải Nghiệm, Tự Lập và Trưởng Thành.">
-
     <title>@yield('title','ILA Du Học 2018')</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -22,8 +15,8 @@
     <![endif]-->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
     <!-- Custom Css -->
-    <link rel="stylesheet" href="public/assets/frontend/css/swiper.css">
-    <link rel="stylesheet" href="public/assets/frontend/css/animate.min.css">
+    <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/swiper.css">
+    <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/animate.min.css">
     <link href="{!!asset('public') !!}/assets/frontend/css/style.css" rel="stylesheet">
     <link href="{!!asset('public') !!}/assets/frontend/css/reponsive.css" rel="stylesheet">
     <link href="{!!asset('public') !!}/assets/frontend/css/custom-lp.css" rel="stylesheet">

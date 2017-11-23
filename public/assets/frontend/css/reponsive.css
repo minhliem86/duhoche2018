@@ -398,11 +398,11 @@
 
     .discover .top-box > div:last-child > div img{
     }
-    .title-country{
-        font-size: 0.7em;
-    }
+    /*.title-country{*/
+        /*font-size: 0.7em;*/
+    /*}*/
     .btn-dis{
-        font-size: 0.6em;
+        /*font-size: 0.6em;*/
         padding: 0.5em 1.5em 0.2em;
         bottom:1.2em;
     }

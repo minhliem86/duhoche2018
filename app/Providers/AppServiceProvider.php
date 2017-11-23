@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-        View::composer(['Client::layouts.discover', 'Client::layouts.header'],'\App\ViewComposers\DiscoverComposer');
+//        View::composer(['Client::layouts.discover', 'Client::layouts.header'],'\App\ViewComposers\DiscoverComposer');
 	}
 
 	/**

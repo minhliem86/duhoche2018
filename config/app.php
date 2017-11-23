@@ -154,8 +154,8 @@ return [
         'Ollieread\Multiauth\Passwords\PasswordResetServiceProvider',
         'Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider',
         'Approached\LaravelImageOptimizer\ServiceProvider',
-        'Codingo\Dropzoner\DropzonerServiceProvider'
-
+        'Codingo\Dropzoner\DropzonerServiceProvider',
+        'Barryvdh\Cors\ServiceProvider'
 	],
 
 	/*
@@ -208,8 +208,7 @@ return [
         'DataTables' => 'yajra\Datatables\Facades\DataTables',
         'Image' => 'Intervention\Image\Facades\Image',
         'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
-        'Str' => 'Illuminate\Support\Str'
-
+        'Str' => '\Illuminate\Support\Str'
 	],
 
 ];

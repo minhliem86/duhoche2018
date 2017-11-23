@@ -16,33 +16,33 @@
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-15">
-                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
-                                        <p class="title title-inner-section">Mở rộng tầm nhìn</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
-                                        <p class="title title-inner-section">Mở rộng tầm nhìn</p>
+                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/morongtamnhin.png" class="img-responsive img-inner-section" alt="MỞ RỘNG TẦM NHÌN RA THẾ GIỚI">
+                                        <p class="title title-inner-section">MỞ RỘNG TẦM NHÌN <span>RA THẾ GIỚI</span></p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
-                                        <p class="title title-inner-section">Mở rộng tầm nhìn</p>
+                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/renluyen.png" class="img-responsive img-inner-section" alt="RÈN LUYỆN TÍNH TỰ LẬP">
+                                        <p class="title title-inner-section">RÈN LUYỆN TÍNH TỰ LẬP</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-15">
+                                    <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
+                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/gapgo-giaoluu.png" class="img-responsive img-inner-section" alt="GẶP GỠ VÀ GIAO LƯU BẠN BÈ QUỐC TẾ">
+                                        <p class="title title-inner-section">GẶP GỠ VÀ GIAO LƯU <span>BẠN BÈ QUỐC TẾ</span></p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.4s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
-                                        <p class="title title-inner-section">Mở rộng tầm nhìn</p>
+                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/thunghiem.png" class="img-responsive img-inner-section" alt="THỬ NGHIỆM HÀNH TRÌNH DU HỌC">
+                                        <p class="title title-inner-section">THỬ NGHIỆM HÀNH TRÌNH DU HỌC</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.5s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/layouts/170x170.png" class="img-responsive img-inner-section" alt="">
-                                        <p class="title title-inner-section">Mở rộng tầm nhìn</p>
+                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/trainghiem.png" class="img-responsive img-inner-section" alt="TRẢI NGHIỆM THỰC TẾ">
+                                        <p class="title title-inner-section">TRẢI NGHIỆM THỰC TẾ</p>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +61,7 @@
                     <h2 class="animate" data-animate="fadeInUp">ĐIỂM LẠI DU HỌC HÈ 2017</h2>
                     <div class="review-container">
                         <div class="video-wrapper">
-
+                            <div data-type="youtube" data-video-id="gHSbes0tXaQ"></div>
                         </div>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                         @foreach($promotion as $item_promotion)
                                         <div class="col-sm-3">
                                             <div class="each-promotion each animate" data-animate="fadeInUp" data-duration="1.0s" >
-                                                <img src="{!! asset($item_promotion->img_url) !!}" class="img-responsive img-inner-section" alt="{!! $item_promotion->title !!}">
+                                                <img src="{!! asset($item_promotion->img_homepage) !!}" class="img-responsive img-inner-section" alt="{!! $item_promotion->title !!}">
                                                 <p class="title title-inner-section">
                                                     {!! $item_promotion->title !!}</span>
                                                 </p>
@@ -142,6 +142,8 @@
 @stop
 
 @section("script")
+    <link rel="stylesheet" href="{!! asset('public/assets/frontend') !!}/js/video/plyr.css">
+    <script src="{!! asset('public/assets/frontend') !!}/js/video/plyr.js"></script>
     <script>
         $(document).ready(function(){
             $('.banner-homepage .tp-banner').revolution({
@@ -151,6 +153,9 @@
                 hideThumbs:10,
                 navigationType:'none'
             })
+
+            /*INITIAL VIDEO*/
+            plyr.setup();
         })
     </script>
 @stop
