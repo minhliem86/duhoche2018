@@ -13,6 +13,16 @@
     <![endif]-->
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery-2.1.1.js" type="text/javascript"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/vivus.min.js"></script>
+    <script src="{!!asset('public') !!}/assets/frontend/js/cookies.js"></script>
+    <script src="{!!asset('public') !!}/assets/frontend/js/common.js"   ></script>
+    <script async>
+        function renderSVG(sgvID, loadingID){
+            new Vivus(sgvID, {duration: 250, file: "{!!asset('public') !!}/assets/frontend/images/duhoc.svg", start: 'autostart', dashGap: 2, forceRender: true });
+            setInterval(function () {
+                $("#"+loadingID).css({'opacity' : 1})
+            },3000);
+        }
+    </script>
     <!-- Custom Css -->
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/swiper.css">
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/animate.min.css">
@@ -24,21 +34,6 @@
 </head>
 
 <body>
-    <div id="preloader">
-        <div class="sgv-container">
-            <div id="my-div"></div>
-            <script>
-                $(document).ready(function(){
-                    new Vivus('my-div', {duration: 200, file: "{!!asset('public') !!}/assets/frontend/images/Logo-ILA-DU-HOC2.svg", start: 'autostart', dashGap: 1, forceRender: false });
-                })
-
-            </script>
-            <p>
-                <img src="{!!asset('public') !!}/assets/frontend/images/gif-load.gif" alt="Loading">
-            </p>
-
-        </div>
-    </div>
     <div class="osc-summer">
         <div class="container-fluid">
             <div class="row">
@@ -63,9 +58,6 @@
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/js/revolution/css/settings.css">
     <script src="{!!asset('public') !!}/assets/frontend/js/revolution/jquery.themepunch.plugins.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/revolution/jquery.themepunch.revolution.min.js"></script>
-    <script>
-
-    </script>
     @yield("script")
 </body>
 </html>

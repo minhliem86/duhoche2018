@@ -49,6 +49,8 @@ $cl-xanh:#2b328c;
   position: fixed;
   background-color:white;
   z-index:1900;
+  top:0;
+  left:0;
   .sgv-container{
     position:fixed;
     max-width:250px;
@@ -58,8 +60,11 @@ $cl-xanh:#2b328c;
     -webkit-transform:translate(-50%, -50%);
     -moz-transform:translate(-50%, -50%);
     text-align:center;
-    img{
-      margin:0 auto;
+    #loading-img{
+      opacity:0;
+      transition: opacity 0.4s;
+      -webkit-transition: opacity 0.4s;
+      -moz-transition: opacity 0.4s;
     }
   }
 }
@@ -67,6 +72,7 @@ $cl-xanh:#2b328c;
 header{
   padding:15px 0;
   position:relative;
+  z-index:10;
   .topmenu{
     margin-top:20px;
     .navbar-default a{
@@ -122,6 +128,92 @@ header{
 /*RESET 2017*/
 section.banner{
   padding:0 !important;
+}
+
+/*EFFECT IMAGE*/
+.img-shadow-container{
+  width:198px;
+  height:198px;
+  background-size:cover;
+  position:relative;
+  margin:0 auto 20px;
+  &:before{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    background-color:lighten($bg-vang, 20%);
+    z-index:2;
+    opacity: 0;
+    transform:matrix(1,0,0,1,0,0);
+    transition: all 1.3s;
+  }
+  span.img-load{
+    position: relative;
+    z-index:5;
+    display: block;
+    width:100%;
+    height:100%;
+    background-size:cover;
+    transform:matrix(1,0,0,1,0,0);
+    transition: all 0.5s;
+  }
+  &.white-shadow{
+    width:255px;
+    height:255px;
+    &:before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:100%;
+      border-radius:50%;
+      background-color:rgba(255,255,255,0.8);
+      z-index:2;
+      opacity: 0;
+      transform:matrix(1,0,0,1,0,0);
+      transition: all 1.3s;
+    }
+  }
+  &:hover{
+    &:before{
+      opacity: 0.8;
+      animation: shadow 1.2s  1;
+    }
+    span.img-load{
+      transform:matrix(0.9,0,0,0.9,0,0);
+    }
+  }
+}
+@keyframes shadow {
+  0%{
+    opacity: 0.8;
+    transform:matrix(1,0,0,1,0,0);
+  }
+  100%{
+    opacity: 0;
+    transform:matrix(1.4,0,0,1.4,0,0);
+  }
+}
+@-webkit-keyframes shadow {
+  0%{
+    opacity: 0.8;
+    transform:matrix(1,0,0,1,0,0);
+  }
+  100%{
+    opacity: 0;
+    transform:matrix(1.4,0,0,1.4,0,0);
+  }
+}
+@-moz-keyframes shadow {
+  0%{
+    opacity: 0.8;
+    transform:matrix(1,0,0,1,0,0);
+  }
+  100%{
+    opacity: 0;
+    transform:matrix(1.4,0,0,1.4,0,0);
+  }
 }
 
 /*HOME PAGE*/

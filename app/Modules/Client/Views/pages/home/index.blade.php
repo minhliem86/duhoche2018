@@ -5,6 +5,23 @@
 @stop
 
 @section("content")
+    <div id="preloader">
+        <div class="sgv-container">
+            <div id="my-logo"></div>
+            <p id="loading-img">
+                <img src="{!!asset('public') !!}/assets/frontend/images/gif-load.gif" alt="Loading">
+            </p>
+            <script>
+                if(!Cookies.get('firsttime')){
+                    renderSVG("my-logo","loading-img");
+                    HidePreLoader("preloader");
+                    Cookies.set("firsttime",1,{expires: 3600});
+                }else{
+                    $("#preloader").remove();
+                }
+            </script>
+        </div>
+    </div>
     @include("Client::layouts.banner_general")
     <!-- **************** Wellcome ****************-->
     <section class="wellcome">
@@ -17,31 +34,41 @@
                             <div class="row">
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.2s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/morongtamnhin.png" class="img-responsive img-inner-section" alt="MỞ RỘNG TẦM NHÌN RA THẾ GIỚI">
+                                        <div class="img-shadow-container" >
+                                            <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/morongtamnhin.png)"></span>
+                                        </div>
                                         <p class="title title-inner-section">MỞ RỘNG TẦM NHÌN <span>RA THẾ GIỚI</span></p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.3s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/renluyen.png" class="img-responsive img-inner-section" alt="RÈN LUYỆN TÍNH TỰ LẬP">
+                                        <div class="img-shadow-container" >
+                                            <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/renluyen.png)"></span>
+                                        </div>
                                         <p class="title title-inner-section">RÈN LUYỆN TÍNH TỰ LẬP</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.1s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/gapgo-giaoluu.png" class="img-responsive img-inner-section" alt="GẶP GỠ VÀ GIAO LƯU BẠN BÈ QUỐC TẾ">
+                                        <div class="img-shadow-container" >
+                                            <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/gapgo-giaoluu.png)"></span>
+                                        </div>
                                         <p class="title title-inner-section">GẶP GỠ VÀ GIAO LƯU <span>BẠN BÈ QUỐC TẾ</span></p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.4s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/thunghiem.png" class="img-responsive img-inner-section" alt="THỬ NGHIỆM HÀNH TRÌNH DU HỌC">
+                                        <div class="img-shadow-container" >
+                                            <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/thunghiem.png)"></span>
+                                        </div>
                                         <p class="title title-inner-section">THỬ NGHIỆM HÀNH TRÌNH DU HỌC</p>
                                     </div>
                                 </div>
                                 <div class="col-md-15">
                                     <div class="each-welcome each animate" data-animate="fadeInUp" data-duration="1.0s" data-delay="0.5s">
-                                        <img src="{!!asset('public/assets/frontend') !!}/images/keypoint/trainghiem.png" class="img-responsive img-inner-section" alt="TRẢI NGHIỆM THỰC TẾ">
+                                        <div class="img-shadow-container" >
+                                            <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/trainghiem.png)"></span>
+                                        </div>
                                         <p class="title title-inner-section">TRẢI NGHIỆM THỰC TẾ</p>
                                     </div>
                                 </div>
@@ -85,10 +112,14 @@
                                         @foreach($promotion as $item_promotion)
                                         <div class="col-sm-3">
                                             <div class="each-promotion each animate" data-animate="fadeInUp" data-duration="1.0s" >
-                                                <img src="{!! asset($item_promotion->img_homepage) !!}" class="img-responsive img-inner-section" alt="{!! $item_promotion->title !!}">
-                                                <p class="title title-inner-section">
-                                                    {!! $item_promotion->title !!}</span>
-                                                </p>
+                                                <a href="{!! route('khuyenmai') !!}">
+                                                    <div class="img-shadow-container white-shadow" >
+                                                        <span class="img-load" style="background-image:url({!! asset($item_promotion->img_homepage) !!})"></span>
+                                                    </div>
+                                                    <p class="title title-inner-section">
+                                                        {!! $item_promotion->title !!}</span>
+                                                    </p>
+                                                </a>
                                             </div>
                                         </div>
                                         @endforeach

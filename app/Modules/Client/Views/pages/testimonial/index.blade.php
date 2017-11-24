@@ -77,10 +77,10 @@
                                         <div class="col-xs-12 col-sm-12 ">
                                             @foreach($testimonial as $item_testimonial)
                                             <div class="wrap-each-testi-mobile">
-                                                <a href="trai-nghiem-du-hoc/minh-thanh-minh-tam-du-hoc-he-2016.html"><img src="{!!asset($item_testimonial->img_url) !!}/images//1486114476_minhtam-canh.jpg" class="img-responsive" alt="{!! $item_testimonial->author !!}"></a>
+                                                <a href="{!! route('testimonial.detail', $item_testimonial->slug) !!}"><img src="{!!asset($item_testimonial->img_url) !!}" class="img-responsive" alt="{!! $item_testimonial->author !!}"></a>
                                                 <div class="testtimanial-slider-item">
                                                     <h4><span>{!! $item_testimonial->author !!}</span><a href="trai-nghiem-du-hoc/minh-thanh-minh-tam-du-hoc-he-2016.html" class="xemthem">Đọc thêm</a></h4>
-                                                    <a href="trai-nghiem-du-hoc/minh-thanh-minh-tam-du-hoc-he-2016.html"><blockquote>{!! Str::words($item_testimonial->description, 30) !!}</blockquote></a>
+                                                    <a href="{!! route('testimonial.detail', $item_testimonial->slug) !!}"><blockquote>{!! Str::words($item_testimonial->description, 30) !!}</blockquote></a>
                                                 </div>
                                             </div>
                                             @endforeach
