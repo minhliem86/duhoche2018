@@ -72,7 +72,7 @@ $cl-xanh:#2b328c;
 header{
   padding:15px 0;
   position:relative;
-  z-index:10;
+  z-index:60;
   .topmenu{
     margin-top:20px;
     .navbar-default a{
@@ -591,5 +591,116 @@ footer{
         border-right:none;
       }
     }
+  }
+}
+
+
+/*REGISTER*/
+section.register{
+  margin-top:20px;
+  .register-container{
+    h2.title{
+      max-width:800px;
+      margin:0 auto 30px;
+      span{
+        display:block
+      }
+    }
+    .form-container{
+      max-width:800px;
+      margin:0 auto;
+      background:white;
+      padding:25px;
+      .inline-text *{
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        font-weight:600;
+      }
+      .wrap-city, .wrap-quocgia {
+        display: flex;
+        .inline-text, .col-quocgia{
+          flex:1;
+        }
+        @include media{
+          flex-direction:column;
+          .inline-text{
+            margin-bottom:10px;
+            display: inline-block;
+          }
+        }
+
+      }
+      .wrap-quocgia *{
+        transition: none;
+        -webkit-transition: none;
+        -moz-transition: none;
+        .inline-column{
+          display:block;
+          margin-bottom:10px;
+          &:last-child{
+            margin-bottom: 0;
+            @include media{
+              margin-bottom:10px;
+            }
+          }
+        }
+      }
+
+      .btn-container{
+        text-align:center;
+        padding:40px 0;
+        max-width:180px;
+        margin:0 auto;
+        .wrap-btn{
+          position:relative;
+          margin:0;
+          &:before{
+            content:'';
+            position:absolute;
+            width:100%;
+            height:100%;
+            border-radius:30px;
+            background: $bg-vang;
+            z-index:2;
+            opacity: 0.8;
+            transition:all 0.5s;
+            animation: btn-dk 2s 1.5s infinite;
+          }
+        }
+        .btn-reg{
+          background:#EF6222;
+          color:white;
+          border-radius:30px;
+          padding:10px 0px;
+          display: inline-block;
+          width: 100%;
+          border:1px solid $bg-vang;
+          text-transform: uppercase;
+          font-weight:600;
+          z-index:4;
+          position: relative;
+          outline:none;
+        }
+      }
+
+    }
+
+  }
+
+  &.thankyou{
+    h2{
+      font-size:20px;
+    }
+  }
+}
+@keyframes btn-dk {
+  0%{
+    opacity:0.8;
+    transform:matrix(1,0,0,1,0,0);
+  }
+  100%{
+    opacity:0;
+    transform:matrix(1.2,0,0,1.4,0,0);
   }
 }

@@ -155,7 +155,8 @@ return [
         'Unisharp\Laravelfilemanager\LaravelFilemanagerServiceProvider',
         'Approached\LaravelImageOptimizer\ServiceProvider',
         'Codingo\Dropzoner\DropzonerServiceProvider',
-        'Barryvdh\Cors\ServiceProvider'
+        'Barryvdh\Cors\ServiceProvider',
+        'Yocmen\HtmlMinify\HtmlMinifyServiceProvider'
 	],
 
 	/*
