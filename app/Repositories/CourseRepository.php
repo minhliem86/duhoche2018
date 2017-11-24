@@ -12,4 +12,10 @@ class CourseRepository extends BaseRepository implements RestfulInterface{
         return get_class(new Course);
     }
   // END
+
+    public function randomCourse($columns=['*'], $take = 4, $with=[])
+    {
+        $query = $this->make($with);
+        return $query->where('status',1)->orderByRaw("RAND()")->take($take)->get($columns);
+    }
 }

@@ -16,12 +16,13 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="wrap-content">
+                        <h3 class="title-course">{!! $course->title !!}</h3>
                         {!! $course->content !!}
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="img-box">
-                        <img src="{!! $course->img_url !!}" class="img-responsive" alt="{!! $course->title !!}">
+                        <img src="{!! asset($course->img_url) !!}" class="img-responsive" alt="{!! $course->title !!}">
                     </div>
                     <div class="content-2">
                         {!! $course->content_column2 !!}
@@ -45,7 +46,7 @@
                     <div class="wrap-promo-bottom">
                         <div class="left-promo-inner">
                             <h3>Đăng Ký Sớm</h3>
-                            <p>Để nhận ngay ưu đãi lên đến <b>12.500.000đ </b></p>
+                            <p>Để nhận ngay ưu đãi </p>
                         </div>
                         <div class="right-promo-inner">
                             <a href="lien-he.html" class="btn btn-register">Đăng ký</a>
@@ -58,5 +59,14 @@
 @stop
 
 @section("script")
+    <link rel="stylesheet" href="{!! asset('public/assets/frontend') !!}/js/table/basictable.css">
+    <script src="{!! asset('public/assets/frontend') !!}/js/table/jquery.basictable.min.js"></script>
 
+    <script>
+//        $(document).ready(function(){
+//            $('.wrap-schedule table').basictable({
+//                breakpoint: 768,
+//            })
+//        })
+    </script>
 @stop

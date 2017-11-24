@@ -44,7 +44,7 @@
                     <div class="wrap-promo-bottom">
                         <div class="left-promo-inner">
                             <h3>Đăng Ký Sớm</h3>
-                            <p>Để nhận ngay ưu đãi lên đến <b>12.500.000đ </b></p>
+                            <p>Để nhận ngay ưu đãi</p>
                         </div>
                         <div class="right-promo-inner">
                             <a href="lien-he.html" class="btn btn-register">Đăng ký</a>

@@ -27,7 +27,7 @@
                                                                     <img src="{!!asset($item_testimonial->img_url) !!}" class="img-responisve" alt="{!! $item_testimonial->author !!}">
                                                                     <div class="testtimanial-slider-item">
                                                                         <h4>{!! $item_testimonial->author !!}</h4>
-                                                                        <blockquote>“{!! Str::words($item_testimonial->description, 40) !!}</blockquote>
+                                                                        <blockquote>{!! Str::words($item_testimonial->description, 40) !!}</blockquote>
                                                                         <a href="{!! route('testimonial.detail', $item_testimonial->slug ) !!}" class="btn btn-readmore">XEM THÊM</a>
                                                                     </div>
                                                                 </div>
@@ -53,7 +53,7 @@
                                                                     <img src="{!!asset($item_testimonial_thumb->img_avatar) !!}" class="img-circle img-avatar" width="80" height="80" alt="{!! $item_testimonial_thumb->author !!}">
                                                                     <div class="wrap-content-slide-v">
                                                                         <h4>{!! $item_testimonial_thumb->author !!}</h4>
-                                                                        <p>{!! Str::words($item_testimonial_thumb->description, 20) !!}</p>
+                                                                        <p>{!! Str::words($item_testimonial_thumb->description, 25) !!}</p>
                                                                         <a href="{!! route('testimonial.detail', $item_testimonial_thumb->slug) !!}" class="btn btn-readmore">XEM THÊM</a>
                                                                     </div>
                                                                 </div>
@@ -104,7 +104,7 @@
                     <h2>ĐIỂM LẠI DU HỌC HÈ 2017</h2>
                     <div class="review-container">
                         <div class="video-wrapper">
-
+                            <div data-type="youtube" data-video-id="gHSbes0tXaQ"></div>
                         </div>
                     </div>
                 </div>
@@ -118,6 +118,8 @@
 @stop
 
 @section("script")
+    <link rel="stylesheet" href="{!! asset('public/assets/frontend') !!}/js/video/plyr.css">
+    <script src="{!! asset('public/assets/frontend') !!}/js/video/plyr.js"></script>
     <script defer>
         $(document).ready(function(){
             $('.banner-homepage .tp-banner').revolution({
@@ -161,6 +163,11 @@
             mySwiper.params.control = SwiperTestiHori;
             SwiperTestiHori.params.control = mySwiper;
         })
-
+    </script>
+    <script>
+        $(document).ready(function(){
+            /*INITIAL VIDEO*/
+            plyr.setup();
+        })
     </script>
 @stop

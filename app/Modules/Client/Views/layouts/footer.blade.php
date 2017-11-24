@@ -7,22 +7,23 @@
                     <div class="col col-first">
                         <div class="each-location">
                             <h4>HỒ CHÍ MINH</h4>
-                            <p>0903 891 511</p>
-                            <p>0909 976 636</p>
+                            <p><a href="tel:0903891511" class="tel">0903 891 511</a></p>
+                            <p><a href="tel:0909976636" class="tel">0909 976 636</a></p>
                         </div>
                         <div class="each-location">
                             <h4>HÀ NỘI</h4>
-                            <p>0912 766 549 - 0938 915 488</p>
+                            <p><a href="tel:0912766549" class="tel">0912 766 549</a></p>
+                            <p><a href="tel:0938915488" class="tel">0938 915 488</a></p>
                         </div>
                     </div>
                     <div class="col col-second">
                         <div class="each-location">
                             <h4>ĐÀ NẴNG</h4>
-                            <p>0511 3647 555</p>
+                            <p><a href="tel:05113647555" class="tel">0511 3647 555</a></p>
                         </div>
                         <div class="each-location">
                             <h4>VŨNG TÀU</h4>
-                            <p>090 975 3363</p>
+                            <p><a href="tel:0909753363" class="tel">090 975 3363</a></p>
                         </div>
                     </div>
                     <div class="col col-third">

@@ -59,9 +59,9 @@ $(document).ready(function () {
             }
         }
     })
-    if(window_w <= 768){
-        mySwiperTestimonialHome.destroy();
-    }
+    // if(window_w <= 768){
+    //     mySwiperTestimonialHome.destroy();
+    // }
 
 
     $('.wrap-content-country').hover(function(){

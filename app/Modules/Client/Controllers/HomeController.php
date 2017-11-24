@@ -20,7 +20,7 @@ class HomeController extends Controller {
 
     public function index()
     {
-        $promotion = $this->promotion->getHomePage(['img_url', 'title'],4);
+        $promotion = $this->promotion->getHomePage(['img_homepage', 'title'],4);
         $testimonial = $this->testimonial->getHomePage(['slug', 'img_url', 'author', 'description'],'4');
         return view('Client::pages.home.index', compact('promotion', 'testimonial'));
     }

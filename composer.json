@@ -15,7 +15,8 @@
 		"sboo/multiauth" : "4.0.*",
 		"unisharp/laravel-filemanager": "~1.8",
 		"codingo-me/dropzoner": "1.0.0",
-		"approached/laravel-image-optimizer": "2.3.0"
+		"approached/laravel-image-optimizer": "2.3.0",
+		"barryvdh/laravel-cors" : "0.7.3"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
