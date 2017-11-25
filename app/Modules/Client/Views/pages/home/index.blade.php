@@ -69,7 +69,7 @@
                                         <div class="img-shadow-container" >
                                             <span class="img-load" style="background-image:url({!!asset('public/assets/frontend') !!}/images/keypoint/trainghiem.png)"></span>
                                         </div>
-                                        <p class="title title-inner-section">TRẢI NGHIỆM THỰC TẾ</p>
+                                        <p class="title title-inner-section">TRẢI NGHIỆM THỰC TẾ <span>CUỘC SỐNG TẠI NHÀ BẢN XỨ HOẶC KÝ TÚC XÁ</span></p>
                                     </div>
                                 </div>
                             </div>
