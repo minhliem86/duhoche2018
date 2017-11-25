@@ -111,13 +111,13 @@ class CountryController extends Controller {
             $media->type = 'banner';
             $country->media()->save($media);
         }
-        if($request->has('img_540x355'))
-        {
-            $media = new Media();
-            $media->img_url = $request->input('img_540x355');
-            $media->type = '540x355';
-            $country->media()->save($media);
-        }
+        //  if($request->has('img_540x355'))
+        // {
+        //     $media = new Media();
+        //     $media->img_url = $request->input('img_540x355');
+        //     $media->type = '540x355';
+        //     $country->media()->save($media);
+        // }
 
         return redirect()->route('admin.country.index')->with('success','Created !');
 	}
@@ -170,19 +170,24 @@ class CountryController extends Controller {
         ];
         $country = $this->country->update($data, $id);
 
-        $media_banner = $country->media()->where('type','banner')->first() ? $country->media->where('type','banner')->first()->id : null;
+        $media_banner = count($country->media()->where('type','banner')->first()) ? $country->media->where('type','banner')->first()->id : null;
         if($media_banner){
             $media_obj = Media::find($media_banner);
             $media_obj->img_url = $request->input('img_banner01');
             $media_obj->save();
+        }else{
+            $media = new Media();
+            $media->img_url = $request->input('img_banner01');
+            $media->type = 'banner';
+            $country->media()->save($media);
         }
-        $media_540x355 = $country->media()->where('type','540x355')->first() ? $country->media->where('type','540x355')->first()->id : null;
-        if($media_540x355)
-        {
-            $media = Media::find($media_540x355);
-            $media->img_url = $request->input('img_540x355');
-            $media->save();
-        }
+        // $media_540x355 = $country->media()->where('type','540x355')->first() ? $country->media->where('type','540x355')->first()->id : null;
+        // if($media_540x355)
+        // {
+        //     $media = Media::find($media_540x355);
+        //     $media->img_url = $request->input('img_540x355');
+        //     $media->save();
+        // }
         return redirect()->route('admin.country.index')->with('success', 'Updated !');
 	}
 

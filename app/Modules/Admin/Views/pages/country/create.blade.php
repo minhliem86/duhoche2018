@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Image:</label>
+                    <label class="col-md-2 control-label">Image 660x350:</label>
                     <div class="col-md-10">
                         <div class="input-group">
                  <span class="input-group-btn">
@@ -45,7 +45,7 @@
                         <img id="holder" style="margin-top:15px;max-height:100px;">
                     </div>
                 </div>
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <label class="col-md-2 control-label">Image 540x355:</label>
                     <div class="col-md-10">
                         <div class="input-group">
@@ -58,9 +58,9 @@
                         </div>
                         <img id="540x355-preview" style="margin-top:15px;max-height:100px;">
                     </div>
-                </div>
+                </div> -->
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Banner Image:</label>
+                    <label class="col-md-2 control-label">Banner Image 1920x700:</label>
                     <div class="col-md-10">
                         <div class="input-group">
                             <span class="input-group-btn">

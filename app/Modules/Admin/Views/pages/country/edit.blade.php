@@ -49,37 +49,23 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Image:</label>
+                    <label class="col-md-2 control-label">Image 660x350:</label>
                     <div class="col-md-10">
                         <div class="input-group">
                          <span class="input-group-btn">
                            <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                             <i class="fa fa-picture-o"></i> Choose
+                             <i class="fa fa-picture-o"></i> Avatar
                            </a>
                          </span>
                             {!!Form::hidden('img_url',old('img_url'), ['class'=>'form-control', 'id'=>'thumbnail' ])!!}
                         </div>
                         <img id="holder" style="margin-top:15px;max-height:100px;"
-                             src="{!! !empty($inst->img_url) ? asset($inst->img_url) : ''!!}">
+                             src="{!! $inst->img_url ? asset($inst->img_url) : ''!!}">
                     </div>
                 </div>
+                
                 <div class="form-group">
-                    <label class="col-md-2 control-label">Image 540x355:</label>
-                    <div class="col-md-10">
-                        <div class="input-group">
-                            <span class="input-group-btn">
-                                <a id="lfm-540x355" data-input="thumbnail-540x355" data-preview="540x355-preview" class="btn btn-primary">
-                                    <i class="fa fa-picture-o"></i> Choose
-                                </a>
-                            </span>
-                            {!!Form::hidden('img_540x355',!empty($inst->media->where('type','540x355')->first()) ? $inst->media->where('type','540x355')->first()->img_url : '', ['class'=>'form-control', 'id'=>'thumbnail-540x355' ])!!}
-                        </div>
-                        <img id="540x355-preview" style="margin-top:15px;max-height:100px;"
-                             src="{!! !empty($inst->media->where('type','540x355')->first()) ? asset($inst->media->where('type','540x355')->first()->img_url) : '' !!}" >
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Banner Image:</label>
+                    <label class="col-md-2 control-label">Banner Image 1920 x 700:</label>
                     <div class="col-md-10">
                         <div class="input-group">
                             <span class="input-group-btn">
@@ -87,10 +73,10 @@
                                     <i class="fa fa-picture-o"></i> Choose
                                 </a>
                             </span>
-                            {!!Form::hidden('img_banner01',!empty($inst->media->where('type','banner')->first()) ? $inst->media->where('type','banner')->first()->img_url : '', ['class'=>'form-control', 'id'=>'thumbnail-banner' ])!!}
+                            {!!Form::hidden('img_banner01',count($inst->media->where('type','banner')->first()) ? $inst->media->where('type','banner')->first()->img_url : '', ['class'=>'form-control', 'id'=>'thumbnail-banner' ])!!}
                         </div>
                         <img id="banner01-preview" style="margin-top:15px;max-height:100px;"
-                             src="{!! !empty($inst->media->where('type','banner')->first()) ? asset($inst->media->where('type','banner')->first()->img_url) : '' !!}" >
+                             src="{!! count($inst->media->where('type','banner')->first()) ? asset($inst->media->where('type','banner')->first()->img_url) : '' !!}" >
                     </div>
                 </div>
             </fieldset>
@@ -142,7 +128,7 @@
         /*IMAGE META*/
         init_btnImage(url, '#lfm-banner01');
         /*IMAGE 540x355*/
-        init_btnImage(url,'#lfm-540x355');
+        // init_btnImage(url,'#lfm-540x355');
 
         // SUBMIT FORM
         function submitForm() {
