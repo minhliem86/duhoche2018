@@ -50,6 +50,7 @@
     </div> <!-- end osc-summer-->
 
     <script src="{!!asset('public') !!}/assets/frontend/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="{!!asset('public') !!}/assets/frontend/js/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery.validate.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/swiper.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery.sticky.js"></script>

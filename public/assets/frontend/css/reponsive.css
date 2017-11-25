@@ -128,14 +128,6 @@
         background: #ffcb05;
         border: none;
      }
-    .topmenu ul.nav li.dropdown:hover .dropdown-menu a,
-    .topmenu .navbar-nav .open .dropdown-menu>li>a{
-        background: transparent !important;
-        color: #2b328c !important;
-        padding: 5px 15px 5px 25px;
-        line-height: 20px;
-
-    }
     .logo-box{
         margin-top:60px;
     }

@@ -25,12 +25,14 @@
                                 <li class="{!! LP_lib::setActive(1,'') !!}"><a href="{!! route('homepage') !!}">TRANG CHỦ</a></li>
                                 @if(!$country_composer->isEmpty())
                                 <li class="dropdown">
-                                    <a href="javascript:avoid()" class="dropdown-toggle" data-toggle="dropdown">QUỐC GIA <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        @foreach($country_composer as $item_menu)
-                                        <li><a href="{!! route('country', $item_menu->slug) !!}">{!! $item_menu->title !!}</a></li>
-                                        @endforeach
-                                    </ul>
+                                    <a href="javascript:avoid()" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0">QUỐC GIA <span class="caret"></span></a>
+                                    <div class="dropdown-menu">
+                                        <ul class="list-dropdown-menu">
+                                                @foreach($country_composer as $item_menu)
+                                                    <li><a href="{!! route('country', $item_menu->slug) !!}">{!! $item_menu->title !!}</a></li>
+                                                @endforeach
+                                        </ul>
+                                    </div>
                                 </li>
                                 @endif
                                 <li class="{!! LP_lib::setActive(1,'khuyen-mai') !!}"><a href="{!! route('khuyenmai') !!}">KHUYẾN MÃI</a></li>
