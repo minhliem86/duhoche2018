@@ -25,10 +25,22 @@
     width: 20%;
     float: left; } }
 /*RESET MENU*/
+@media screen and (max-width: 991px) {
+  .logo-box {
+    margin: 0 auto; } }
+
 .topmenu .navbar-default {
   background: none;
   border: none;
   box-shadow: none; }
+  @media screen and (max-width: 991px) {
+    .topmenu .navbar-default {
+      float: none !important;
+      text-align: center; } }
+@media screen and (max-width: 991px) {
+  .topmenu #navbar .navbar-nav {
+    display: inline-block;
+    float: none; } }
 .topmenu #navbar .navbar-nav > li {
   border-radius: 35px;
   position: relative; }
@@ -53,6 +65,9 @@
     box-shadow: none;
     padding: 6px 22px;
     font-weight: 600; }
+    @media screen and (max-width: 1199px) {
+      .topmenu #navbar .navbar-nav > li a {
+        padding: 4px 16px; } }
 @media screen and (min-width: 768px) {
   .topmenu #navbar .navbar-nav > li:hover a, .topmenu #navbar .navbar-nav > li.active a {
     color: #ffcb05; }
@@ -578,5 +593,141 @@ section.register {
   100% {
     opacity: 0;
     transform: matrix(1.2, 0, 0, 1.4, 0, 0); } }
+/*TRAVEL BLOG*/
+/** COUNTRY PAGE **/
+.each-img-figure {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: 30px; }
+  .each-img-figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.8;
+    transition: all 0.4s; }
+    @media screen and (max-width: 768px) {
+      .each-img-figure img {
+        opacity: 0.6; } }
+  .each-img-figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    .each-img-figure figcaption:before, .each-img-figure figcaption:after {
+      pointer-events: none; }
+  .each-img-figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+  .each-img-figure.effect-layla {
+    background: #ffeb9e; }
+  .each-img-figure.effect-layla figcaption {
+    padding: 30px; }
+  .each-img-figure.effect-layla figcaption::before, .each-img-figure.effect-layla figcaption::after {
+    position: absolute;
+    content: '';
+    opacity: 0; }
+  .each-img-figure.effect-layla figcaption::before {
+    top: 30px;
+    right: 15px;
+    bottom: 30px;
+    left: 15px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0; }
+  .each-img-figure.effect-layla figcaption::after {
+    top: 15px;
+    right: 30px;
+    bottom: 15px;
+    left: 30px;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0; }
+  .each-img-figure.effect-layla h3 {
+    padding-top: 15%;
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    color: white;
+    font-size: 24px; }
+    @media screen and (max-width: 768px) {
+      .each-img-figure.effect-layla h3 {
+        color: #2b328c; } }
+  .each-img-figure.effect-layla img {
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
+    -moz-transform: matrix(1, 0, 0, 1, 0, 0); }
+  .each-img-figure.effect-layla figcaption .btn-fake {
+    display: inline-block;
+    padding: 4px 16px;
+    color: white;
+    font-size: 12px;
+    line-height: 22px;
+    height: auto;
+    width: auto;
+    border-color: white;
+    text-transform: capitalize;
+    transform: matrix(0.4, 0, 0, 0.4, 0, 0);
+    opacity: 0;
+    transition: all 0.4s;
+    outline: none; }
+    @media screen and (max-width: 768px) {
+      .each-img-figure.effect-layla figcaption .btn-fake {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0); } }
+  .each-img-figure.effect-layla figcaption .btn-fake:hover {
+    background-color: #EF6222; }
+  .each-img-figure.effect-layla figcaption::before, .each-img-figure.effect-layla figcaption::after, .each-img-figure.effect-layla p {
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s; }
+  .each-img-figure.effect-layla:hover img {
+    opacity: 0.2;
+    transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -webkit-transform: matrix(1.1, 0, 0, 1.1, 0, 0);
+    -moz-transform: matrix(1.1, 0, 0, 1.1, 0, 0); }
+  .each-img-figure.effect-layla:hover figcaption::before, .each-img-figure.effect-layla:hover figcaption::after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  .each-img-figure.effect-layla:hover h3, .each-img-figure.effect-layla:hover p {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    color: #2b328c; }
+  .each-img-figure.effect-layla:hover figcaption .btn-fake {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0); }
+  .each-img-figure.effect-layla:hover figcaption::after, .each-img-figure.effect-layla:hover h3, .each-img-figure.effect-layla:hover p, .each-img-figure.effect-layla:hover img {
+    -webkit-transition-delay: 0.15s;
+    transition-delay: 0.15s; }
+
+/*COURSE PAGE*/
+.destination-main.destination-travel-blog h2 {
+  margin-bottom: 15px; }
+.destination-main.destination-travel-blog p.title-sub {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 30px;
+  font-size: 24px;
+  text-transform: uppercase; }
+.destination-main.destination-travel-blog .each-img-figure h3 {
+  padding-top: 5%; }
+.destination-main.destination-travel-blog.album-travel-blog h3 {
+  font-size: 16px;
+  line-height: 26px; }
 
 /*# sourceMappingURL=duhoche2018.css.map */

@@ -5,6 +5,7 @@
 @stop
 
 @section("content")
+    {!! $banner_view !!}
     <!--REVIEW 2017-->
     <section class="review">
         <div class="container">
@@ -74,6 +75,14 @@
         $(document).ready(function(){
             /*INITIAL VIDEO*/
             plyr.setup();
+
+            $('.banner-homepage .tp-banner').revolution({
+                delay:5000,
+                startwidth:1920,
+                startheight:700,
+                hideThumbs:10,
+                navigationType:'none'
+            })
         })
     </script>
 @stop

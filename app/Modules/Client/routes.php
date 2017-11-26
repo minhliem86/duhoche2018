@@ -12,9 +12,16 @@ Route::group(['namespace' => 'App\Modules\Client\Controllers'], function(){
     Route::post('/dang-ky', ['as' => 'register.post', 'uses' => 'RegisterController@postRegister']);
     Route::get('/thank-you', ['as' => 'register.thankyou', 'uses' => 'RegisterController@thankyou']);
 
+    /*TRAVEL BLOG*/
+    Route::get('/travel-blog-2017', ['as' => 'travelblog', 'uses' => 'TravelBlogController@getTravelblog']);
+    Route::get('/travel-blog-2017/du-hoc-{slug}', ['as' => 'travelblog.country', 'uses' => 'TravelBlogController@getCountry'])->where('slug','[0-9a-zA-Z._\-]+');
+    Route::get('/travel-blog-2017/{tourcode}', ['as'=>'travelblog.tour', 'uses' => 'TravelBlogController@getCourse'])->where('tourcode','[0-9a-zA-Z._\-]+');
+    Route::get('/travel-blog-2017/{tourcode}/{album_id}', ['as' => 'travelbog.album', 'uses'=>'TravelBlogController@getAlbum'])->where(['tourcode'=>'[0-9a-zA-Z._\-]+', 'album_id'=>'[0-9]+']);
+
     View::composer(['Client::layouts.discover', 'Client::layouts.header'], function($view)  {
         $country = new App\Repositories\CountryRepository;
         $country_composer = $country->getComposer(['title','slug', 'img_url']);
         $view->with('country_composer', $country_composer);
     });
+
 });

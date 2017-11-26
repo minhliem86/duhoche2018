@@ -23,7 +23,8 @@ class CourseController extends Controller {
         if($slug){
             $country = $this->country->findByField("slug",$slug,['id','title','slug'],['courses'])->first();
             $course = $country->courses()->get(['title', 'slug', 'age', 'time', 'img_url']);
-            return view("Client::pages.course.country", compact('country', 'course'));
+            $banner_view = view("Client::layouts.banner_country", compact('country'))->render();
+            return view("Client::pages.course.country", compact('country', 'course','banner_view'));
         }
     }
 	public function course($slug, $slugCourse)
