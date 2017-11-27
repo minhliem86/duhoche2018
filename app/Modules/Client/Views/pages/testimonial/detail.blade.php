@@ -90,7 +90,7 @@
                             <p>Để nhận ngay ưu đãi</p>
                         </div>
                         <div class="right-promo-inner">
-                            <a href="" class="btn btn-register">Đăng ký</a>
+                            <a href="{!! route('register') !!}" class="btn btn-register">Đăng ký Ngay</a>
                         </div>
                     </div>
                 </div>

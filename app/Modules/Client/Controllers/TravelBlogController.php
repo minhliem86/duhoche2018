@@ -17,11 +17,10 @@ class TravelBlogController extends Controller {
     public function getCountry($slug)
     {
         $country_name = DB::connection('mysql2')->table('countries')->where('slug',$slug)->first();
-        $country = DB::connection('mysql2')->table('countries')
-            ->join('tours', function ($join){
-                $join->on('countries.id', '=','tours.country_id')->where('tours.status','=',1);
-            })
-            ->select('countries.name as country_name', 'tours.title as title', 'tours.img_avatar as img_avatar', 'tours.start as start_date', 'tours.tour_code as tour_code')
+        $country = DB::connection('mysql2')->table('tours')
+            ->select('title', 'img_avatar', 'tour_code')
+            ->where('country_id', $country_name->id)
+            ->where('status',1)
             ->get();
         return view('Client::pages.travelblog.course', compact('country_name','country'));
     }
@@ -32,6 +31,7 @@ class TravelBlogController extends Controller {
         $album = DB::connection('mysql2')->table('albums')
             ->select('title', 'img_url', 'slug', 'id')
             ->where('tour_id', $course_name->id)
+            ->where('status',1)
             ->get();
         return view('Client::pages.travelblog.album', compact('course_name', 'album'));
     }
@@ -40,10 +40,16 @@ class TravelBlogController extends Controller {
     {
         $album_name = DB::connection('mysql2')->table('albums')->where('id',$album_id)->first();
         $photo = DB::connection('mysql2')->table('photos')
-            ->select('img_url','thumbnail_url')
+            ->select('img_url','thumbnail_url','title')
             ->where('status',1)
-            ->paginate(9);
-        return view('Client::pages.travelblog.photo', compact('album_name','photo'));
+            ->where('album_id', $album_id)
+            ->get();
+        if(count($photo)){
+            return view('Client::pages.travelblog.photo', compact('album_name','photo'));
+        }else{
+            return redirect()->back();
+        }
+
     }
 
 }

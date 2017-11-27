@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/public/assets/frontend/js/common.min.js" />
+        <item url="file://$PROJECT_DIR$/public/assets/frontend/js/customScript.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/public/assets/frontend/js/common.min.js" />
+      <root url="file://$PROJECT_DIR$/public/assets/frontend/js/customScript.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

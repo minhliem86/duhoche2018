@@ -60,6 +60,7 @@
       border: 1px solid transparent; } }
   .topmenu #navbar .navbar-nav > li a {
     color: #2b328c;
+    text-transform: uppercase;
     font-family: 'gothamvnubold', sans-serif;
     background: none;
     box-shadow: none;
@@ -313,6 +314,22 @@ section p.title-inner-section {
     @media screen and (max-width: 768px) {
       .discover .discover-container div.img-hack.hack-style02 {
         max-width: 100%; } }
+.discover .discover-container .each-discover {
+  position: relative; }
+  .discover .discover-container .each-discover a.btn-xemthem {
+    width: auto;
+    height: auto;
+    padding: 4px 14px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 30px;
+    right: 15px;
+    transition: all 0.3s;
+    border: none; }
+    .discover .discover-container .each-discover a.btn-xemthem:hover {
+      background: #EF6222;
+      color: white;
+      border: none; }
 
 /*WHYCHOOSEIAL*/
 .whychooseila {
@@ -322,13 +339,24 @@ section p.title-inner-section {
     border-bottom: 2px solid #2b328c; }
 
 /*FOOTER*/
-.each-location {
+footer a.btn-reg {
+  width: auto;
+  height: auto;
+  padding: 4px 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  border: none; }
+  footer a.btn-reg:hover {
+    background: #EF6222;
+    color: white;
+    border: none; }
+footer .each-location {
   min-height: 90px; }
   @media screen and (max-width: 768px) {
-    .each-location {
+    footer .each-location {
       min-height: auto;
       margin-bottom: 20px; } }
-  .each-location a.tel {
+  footer .each-location a.tel {
     text-decoration: none;
     color: #2b328c; }
 
@@ -357,6 +385,16 @@ section p.title-inner-section {
   @media screen and (max-width: 768px) {
     .course-detail-main .img-box {
       margin-bottom: 20px; } }
+.course-detail-main .content-2 .wrap-btnblog {
+  margin-top: 20px; }
+  .course-detail-main .content-2 .wrap-btnblog a {
+    width: auto;
+    height: auto;
+    padding: 4px 18px;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    background: #EF6222; }
 .course-detail-main .wrap-schedule {
   margin-top: 30px; }
   .course-detail-main .wrap-schedule table {

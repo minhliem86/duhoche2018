@@ -133,7 +133,7 @@ class TestimonialController extends Controller {
     public function edit($id)
     {
         $inst = $this->testimonial->find($id,['*']);
-        return view('Admin::pages.testimonial.edit', compact('inst'));
+        return view('Admin::pages.testimonial.edit2', compact('inst'));
     }
 
     /**

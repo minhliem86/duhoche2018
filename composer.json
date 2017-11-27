@@ -17,7 +17,8 @@
 		"codingo-me/dropzoner": "1.0.0",
 		"approached/laravel-image-optimizer": "2.3.0",
 		"barryvdh/laravel-cors" : "0.7.3",
-		"yocmen/html-minify": "2.*"
+		"yocmen/html-minify": "2.*",
+		"spatie/laravel-analytics": "^1.4"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",

@@ -74,7 +74,7 @@
                          </span>
                             {!!Form::hidden('img_avatar',old('img_avatar'), ['class'=>'form-control', 'id'=>'thumbnail80x80' ])!!}
                         </div>
-                        <img id="holder" style="margin-top:15px;max-height:100px;"
+                        <img id="thumbnail80x80-preview" style="margin-top:15px;max-height:100px;"
                              src="{!! !empty($inst->img_avatar) ? asset($inst->img_avatar) : ''!!}">
                     </div>
                 </div>

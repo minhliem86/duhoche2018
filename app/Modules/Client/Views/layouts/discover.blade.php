@@ -29,7 +29,12 @@
                                     <div class="swiper-wrapper">
                                         @foreach( $country_composer as $item_countrycomposer)
                                         <div class="swiper-slide">
-                                            <img src="{!! asset($item_countrycomposer->img_url) !!}" class="img-responsive" alt="{!! asset($item_countrycomposer->title) !!}">
+                                            <div class="each-discover">
+                                                <img src="{!! asset($item_countrycomposer->img_url) !!}" class="img-responsive" alt="{!! asset($item_countrycomposer->title) !!}">
+                                                <a href="{!! route('country', $item_countrycomposer->slug) !!}" class="btn btn-xemthem">Tìm hiểu thêm</a>
+                                            </div>
+
+
                                         </div>
                                         @endforeach
                                     </div>

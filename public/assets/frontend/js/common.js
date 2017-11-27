@@ -1,9 +1,8 @@
-function HidePreLoader(loadingID)
-{
-    $(window).load(function(){
+function HidePreLoader(loadingID) {
+    $(window).load(function () {
         setInterval(function () {
-            $("#"+loadingID).fadeOut();
-        },4000)
+            $("#" + loadingID).fadeOut();
+        }, 4000)
 
     })
 }

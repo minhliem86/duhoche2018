@@ -15,7 +15,7 @@
                 if(!Cookies.get('firsttime')){
                     renderSVG("my-logo","loading-img");
                     HidePreLoader("preloader");
-                    Cookies.set("firsttime",1,{expires: 3600});
+                    Cookies.set("firsttime",1,{expires: 43200});
                 }else{
                     $("#preloader").remove();
                 }
@@ -152,7 +152,7 @@
                                                 <div class="content">
                                                     <h4 class="author">{!! $item_testimonial->author !!}</h4>
                                                     <p class="desc">{!! $item_testimonial->description !!}</p>
-                                                    <a href="#" class="btn btn-yl">Đọc thêm</a>
+                                                    <a href="{!! route('testimonial.detail', $item_testimonial->slug) !!}" class="btn btn-yl">Đọc thêm</a>
                                                 </div>
                                             </div>
                                         </div>

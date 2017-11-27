@@ -32,7 +32,7 @@
                         <a target="_blank" href="http://facebook.com/ILADuhoc" class="fb">facebook.com/ILADuhoc</a>
                     </div>
                     <div class="col col-four">
-                        <a href="#" class="btn btn-reg">ĐĂNG KÝ</a>
+                        <a href="{!! route('register') !!}" class="btn btn-reg">ĐĂNG KÝ NGAY</a>
                     </div>
                 </div>
             </div>

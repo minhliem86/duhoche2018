@@ -26,6 +26,9 @@
                     </div>
                     <div class="content-2">
                         {!! $course->content_column2 !!}
+                        <div class="wrap-btnblog">
+                            <a href="{!! route('travelblog') !!}" class="btn btn-travel" >Điểm lại du học hè 2017</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,14 +62,4 @@
 @stop
 
 @section("script")
-    <link rel="stylesheet" href="{!! asset('public/assets/frontend') !!}/js/table/basictable.css">
-    <script src="{!! asset('public/assets/frontend') !!}/js/table/jquery.basictable.min.js"></script>
-
-    <script>
-//        $(document).ready(function(){
-//            $('.wrap-schedule table').basictable({
-//                breakpoint: 768,
-//            })
-//        })
-    </script>
 @stop

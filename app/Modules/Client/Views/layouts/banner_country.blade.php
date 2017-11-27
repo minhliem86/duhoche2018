@@ -1,4 +1,4 @@
-@if(count($country))
+@if(!$country->media()->where('type','banner')->get()->isEmpty())
 <section class="banner clearfix">
     <div class="row">
         <div class="banner-homepage visible-md visible-lg">

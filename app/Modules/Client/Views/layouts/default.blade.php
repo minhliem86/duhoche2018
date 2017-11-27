@@ -25,12 +25,22 @@
         }
     </script>
     <!-- Custom Css -->
-    <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/swiper.css">
+    <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/swiper.min.css">
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/css/animate.min.css">
-    <link href="{!!asset('public') !!}/assets/frontend/css/style.css" rel="stylesheet">
-    <link href="{!!asset('public') !!}/assets/frontend/css/reponsive.css" rel="stylesheet">
-    <link href="{!!asset('public') !!}/assets/frontend/css/custom-lp.css" rel="stylesheet">
-    <link href="{!!asset('public') !!}/assets/frontend/css/duhoche2018.css" rel="stylesheet">
+    <link href="{!!asset('public') !!}/assets/frontend/css/style.min.css" rel="stylesheet">
+    <link href="{!!asset('public') !!}/assets/frontend/css/reponsive.min.css" rel="stylesheet">
+    <link href="{!!asset('public') !!}/assets/frontend/css/custom-lp.min.css" rel="stylesheet">
+    <link href="{!!asset('public') !!}/assets/frontend/css/duhoche2018.min.css" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-60129748-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-60129748-7');
+    </script>
 
 </head>
 
@@ -55,7 +65,7 @@
     <script src="{!!asset('public') !!}/assets/frontend/js/swiper.min.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/jquery.sticky.js"></script>
     <script src="{!!asset('public') !!}/assets/frontend/js/scrolla.jquery.min.js"></script>
-    <script src="{!!asset('public') !!}/assets/frontend/js/customScript.js"></script>
+    <script src="{!!asset('public') !!}/assets/frontend/js/customScript.min.js"></script>
     <!-- REVOLUTION -->
     <link rel="stylesheet" href="{!!asset('public') !!}/assets/frontend/js/revolution/css/settings.css">
     <script src="{!!asset('public') !!}/assets/frontend/js/revolution/jquery.themepunch.plugins.min.js"></script>

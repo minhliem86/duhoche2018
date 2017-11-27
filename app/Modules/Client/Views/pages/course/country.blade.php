@@ -43,7 +43,7 @@
                                     <div class="box-destination-content">
                                         <div class="box-destination-footer">
                                             <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}" class="btn xemthem">Xem thêm</a>
-                                            <a href="#" class="btn-02 dk">Đăng ký</a>
+                                            <a href="{!! route('register') !!}" class="btn-02 dk">Đăng ký</a>
                                         </div>
                                     </div>
                                 </div>
