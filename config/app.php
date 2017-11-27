@@ -156,7 +156,8 @@ return [
         'Approached\LaravelImageOptimizer\ServiceProvider',
         'Codingo\Dropzoner\DropzonerServiceProvider',
         'Barryvdh\Cors\ServiceProvider',
-        'Yocmen\HtmlMinify\HtmlMinifyServiceProvider'
+        'Yocmen\HtmlMinify\HtmlMinifyServiceProvider',
+        'Spatie\Analytics\AnalyticsServiceProvider'
 	],
 
 	/*
@@ -209,7 +210,8 @@ return [
         'DataTables' => 'yajra\Datatables\Facades\DataTables',
         'Image' => 'Intervention\Image\Facades\Image',
         'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
-        'Str' => '\Illuminate\Support\Str'
+        'Str' => '\Illuminate\Support\Str',
+        'Analytics' => 'Spatie\Analytics\AnalyticsFacade'
 	],
 
 ];
