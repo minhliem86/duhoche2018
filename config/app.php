@@ -157,7 +157,7 @@ return [
         'Codingo\Dropzoner\DropzonerServiceProvider',
         'Barryvdh\Cors\ServiceProvider',
         'Yocmen\HtmlMinify\HtmlMinifyServiceProvider',
-        'Spatie\Analytics\AnalyticsServiceProvider'
+		'Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider'
 	],
 
 	/*
@@ -211,7 +211,7 @@ return [
         'Image' => 'Intervention\Image\Facades\Image',
         'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
         'Str' => '\Illuminate\Support\Str',
-        'Analytics' => 'Spatie\Analytics\AnalyticsFacade'
+		'Analytics' => 'Spatie\Analytics\LaravelAnalyticsFacade'
 	],
 
 ];
