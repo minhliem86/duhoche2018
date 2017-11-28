@@ -4,7 +4,7 @@
             <div class="tp-banner-container">
                 <div class="tp-banner" >
                     <ul>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-link="#">
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-link="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic">
                             <!-- MAIN IMAGE -->
                             <img src="{!! asset('public') !!}/assets/frontend/images/slider/2018/banner-01.jpg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                             <div class="caption sfr"
@@ -12,7 +12,7 @@
                                 <img src="{!! asset('public') !!}/assets/frontend/images/slider/2018/text-banner-01.png" class="img-responsive" alt="">
                             </div>
                         </li>
-                        <li data-transition="slideleft" data-slotamount="7" data-masterspeed="500" data-link="#">
+                        <li data-transition="slideleft" data-slotamount="7" data-masterspeed="500" data-link="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic">
                             <!-- MAIN IMAGE -->
                             <img src="{!! asset('public') !!}/assets/frontend/images/slider/2018/banner-02.jpg"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                             <div class="caption sfr"

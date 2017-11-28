@@ -6,7 +6,7 @@
                 <div class="tp-banner" >
                     <ul>
                         @foreach($country->media()->where('type','banner')->get() as $banner)
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-link="#">
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-link="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic">
                             <!-- MAIN IMAGE -->
                             <img src="{!! asset($banner->img_url) !!}"  data-bgfit="cover" data-bgposition="left top" data-bgrepeat="no-repeat">
                             {{--<div class="caption sfr"--}}

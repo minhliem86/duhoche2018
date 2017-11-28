@@ -1,8 +1,11 @@
 @extends("Client::layouts.default")
 
 @section("meta")
-
+    <meta name="keywords" content="ILA, ILA Du Học Hè 2018, Hè 2018, Khoảng khắc Du họ hè 2017">
+    <meta name="description" content="ĐIỂM LẠI DU HỌC HÈ 2017: Phiêu Lưu, Trải Nghiệm, Tự Lập và Trưởng Thành.">
 @stop
+
+@section("title", "ĐIỂM LẠI DU HỌC HÈ 2017")
 
 @section('content')
     <!-- **************** Wellcome ****************-->

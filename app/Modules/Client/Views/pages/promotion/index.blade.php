@@ -1,8 +1,11 @@
 @extends("Client::layouts.default")
 
 @section("meta")
-
+    <meta name="keywords" content="ILA Du Học, Hè 2018, chương trình khuyến mãi">
+    <meta name="description" content="Những chương trình khuyến mãi cực kỳ hấp dẫn và không thể bỏ lỡ của chương trình ILA Du học hè 2018">
 @stop
+
+@section("title", "ILA Du Học Hè 2018 - Khuyến Mãi")
 
 @section('content')
     @include("Client::layouts.banner_general")
@@ -26,7 +29,7 @@
                                 <div class="promotion-box">
                                     <h3>{!! $item_promotion->title !!}</h3>
                                     <p>{!! $item_promotion->description !!}</p>
-                                    <a href="#" class="btn">Đăng Ký</a>
+                                    <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn">Đăng Ký</a>
                                 </div>
                             </div>
                         </div>
@@ -47,7 +50,7 @@
                             <p>Để nhận ngay ưu đãi</p>
                         </div>
                         <div class="right-promo-inner">
-                            <a href="{!! route('register') !!}" class="btn btn-register">Đăng ký Ngay</a>
+                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-register">Đăng ký Ngay</a>
                         </div>
                     </div>
                 </div>

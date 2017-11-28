@@ -21,7 +21,7 @@ class CourseController extends Controller {
     public function country($slug)
     {
         if($slug){
-            $country = $this->country->findByField("slug",$slug,['id','title','slug'],['courses'])->first();
+            $country = $this->country->findByField("slug",$slug,['id','title','slug',"m_keywords", "m_description","m_img"],['courses'])->first();
             $course = $country->courses()->get(['title', 'slug', 'age', 'time', 'img_url']);
             $banner_view = view("Client::layouts.banner_country", compact('country'))->render();
             return view("Client::pages.course.country", compact('country', 'course','banner_view'));
@@ -31,7 +31,7 @@ class CourseController extends Controller {
     {
         if($slug && $slugCourse){
             $country = $this->country->findByField('slug', $slug,['title','id'])->first();
-            $course = $this->course->findByField('slug', $slugCourse, ['title', 'description', 'content', 'content_column2','img_url', 'code', 'schedule'])->first();
+            $course = $this->course->findByField('slug', $slugCourse, ['title', 'description', 'content', 'content_column2','img_url', 'code', 'schedule', "m_keywords", "m_description", "m_img"])->first();
             return view("Client::pages.course.course", compact('country', 'course'));
         }
 

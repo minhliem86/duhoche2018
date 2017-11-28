@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:description" content="ILA Du Học giới thiệu chương trình Du Học Hè 2018 với 4 giá trị cốt lõi: Phiêu Lưu, Trải Nghiệm, Tự Lập và Trưởng Thành." >
-    <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="{!!asset('public') !!}/favicon.ico">
     @yield('meta')
     <title>@yield('title','ILA Du Học 2018')</title>
 

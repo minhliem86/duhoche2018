@@ -561,6 +561,7 @@ div.promotion-bottom{
     font-size:16px;
     margin:0;
     height:calc(100% - 440px);
+    line-height:26px;
 }
 .testimonial-list .testtimanial-avartar-slider{
     height:440px;

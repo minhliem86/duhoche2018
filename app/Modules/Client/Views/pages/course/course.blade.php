@@ -1,7 +1,15 @@
 @extends("Client::layouts.default")
 
 @section("meta")
+    <meta name="keywords" content="{!! $course->m_keywords !!}">
+    <meta name="description" content="{!! $course->m_description !!}">
+    <meta property="og:image" content="{!! $course->m_img !!}" />
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="350">
+@stop
 
+@section("title")
+    ILA Du Học {!! $country->title !!} - {!!  $course->title !!}
 @stop
 
 @section("content")
@@ -52,7 +60,7 @@
                             <p>Để nhận ngay ưu đãi </p>
                         </div>
                         <div class="right-promo-inner">
-                            <a href="lien-he.html" class="btn btn-register">Đăng ký</a>
+                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-register">Đăng ký</a>
                         </div>
                     </div>
                 </div>

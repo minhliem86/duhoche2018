@@ -1,8 +1,11 @@
 @extends("Client::layouts.default")
 
 @section("meta")
-
+    <meta name="keywords" content="ILA Du Học, Hè 2018, Đăng ký du học hè">
+    <meta name="description" content="Đăng ký tham gia du học hè 2018 cùng ILA Du Học">
 @stop
+
+@section("title", "ILA Du Học Hè 2018 - Đăng ký thành công")
 
 @section("content")
     @include("Client::layouts.banner_general")

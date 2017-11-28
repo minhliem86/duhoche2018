@@ -38,7 +38,7 @@
                                 <li class="{!! LP_lib::setActive(1,'khuyen-mai') !!}"><a href="{!! route('khuyenmai') !!}">KHUYẾN MÃI</a></li>
                                 <li class="{!! LP_lib::setActive(1,'chia-se-trai-nghiem') !!}"><a href="{!! route('testimonial') !!}">TRẢI NGHIỆM DU HỌC</a></li>
                                 <li class="{!! LP_lib::setActive(1,'travel-blog-2017') !!}"><a href="{!! route('travelblog') !!}">Travel Blog 2017</a></li>
-                                <li class="{!! LP_lib::setActive(1,'dang-ky') !!}"><a href="{!! route('register') !!}"><b>ĐĂNG KÝ</b></a></li>
+                                <li class="{!! LP_lib::setActive(1,'dang-ky') !!}"><a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic"><b>ĐĂNG KÝ</b></a></li>
                             </ul>
                         </div>
                     </nav>

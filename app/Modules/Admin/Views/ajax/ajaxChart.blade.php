@@ -6,15 +6,15 @@
             type: "line",
             data: {
                 labels: [
-                    @foreach($ga as $v)
-                        "{{\Carbon\Carbon::createFromFormat('Y-m-d H:i:s', $v['date'])->toDateString()}}",
+                    @foreach($data as $v)
+                        "{!!  $v['date']; !!}",
                     @endforeach
                 ],
                 datasets:[
                     {
                         label: 'Visitors',
                         data: [
-                            @foreach($ga as $item_visitor)
+                            @foreach($data as $item_visitor)
                                 "{{$item_visitor['visitors']}}",
                             @endforeach
                         ],
@@ -24,8 +24,8 @@
                     {
                         label: 'Pageviews',
                         data: [
-                            @foreach($ga as $item_pageview)
-                                "{{$item_pageview['pageViews']}}",
+                            @foreach($data as $item_pageview)
+                                "{{$item_pageview['pageviews']}}",
                             @endforeach
                         ],
                         backgroundColor: 'rgba(131, 173, 239, 0.2)',

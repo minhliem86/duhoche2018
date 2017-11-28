@@ -1,7 +1,8 @@
 @extends("Client::layouts.default")
 
 @section("meta")
-
+    <meta name="keywords" content="ILA, ILA Du Học, Du Học Hè 2018, ILA Du Học Hè 2018, Hè 2018">
+    <meta name="description" content="ILA Du học hè 2018 với 4 giá trị cốt lõi: Phiêu lưu, Tự lập, Trải nghiệm, Trưởng thành. Là bước tiền trạm cho du học dài hạn thành công">
 @stop
 
 @section("content")

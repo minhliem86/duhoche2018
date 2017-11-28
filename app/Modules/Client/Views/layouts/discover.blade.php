@@ -33,8 +33,6 @@
                                                 <img src="{!! asset($item_countrycomposer->img_url) !!}" class="img-responsive" alt="{!! asset($item_countrycomposer->title) !!}">
                                                 <a href="{!! route('country', $item_countrycomposer->slug) !!}" class="btn btn-xemthem">Tìm hiểu thêm</a>
                                             </div>
-
-
                                         </div>
                                         @endforeach
                                     </div>

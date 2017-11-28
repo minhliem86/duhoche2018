@@ -24,9 +24,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers
     Route::post('/ajax-permission', ['as' => 'admin.ajaxCreatePermission', 'uses' => 'Auth\RoleController@postAjaxPermission']);
 
     Route::group(['middleware' => 'auth.admin'], function(){
-        Route::get('/dashboard', ['as'=>'admin.dashboard', function(){
-            return view('Admin::pages.dashboard.index');
-        }]);
+        Route::get('/dashboard',['as' => 'admin.dashboard', 'uses' => 'DashboardController@index']);
 
         //   PORFILE
         Route::get('/profile', ['as' => 'admin.profile.index', 'uses' => 'ProfileController@index']);

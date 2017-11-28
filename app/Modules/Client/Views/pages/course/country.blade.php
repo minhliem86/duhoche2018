@@ -1,7 +1,15 @@
 @extends("Client::layouts.default")
 
 @section("meta")
+    <meta name="keywords" content="{!! $country->m_keywords !!}">
+    <meta name="description" content="{!! $country->m_description !!}">
+    <meta property="og:image" content="{!! $country->m_img !!}" />
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="350">
+@stop
 
+@section("title")
+    ILA Du Học {!!  $country->title !!}
 @stop
 
 @section("content")
@@ -43,7 +51,7 @@
                                     <div class="box-destination-content">
                                         <div class="box-destination-footer">
                                             <a href="{!! route('country.course',[$country->slug, $item_course->slug]) !!}" class="btn xemthem">Xem thêm</a>
-                                            <a href="{!! route('register') !!}" class="btn-02 dk">Đăng ký</a>
+                                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn-02 dk">Đăng ký</a>
                                         </div>
                                     </div>
                                 </div>

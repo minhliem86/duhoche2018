@@ -32,7 +32,7 @@
                         <a target="_blank" href="http://facebook.com/ILADuhoc" class="fb">facebook.com/ILADuhoc</a>
                     </div>
                     <div class="col col-four">
-                        <a href="{!! route('register') !!}" class="btn btn-reg">ĐĂNG KÝ NGAY</a>
+                        <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-reg">ĐĂNG KÝ NGAY</a>
                     </div>
                 </div>
             </div>

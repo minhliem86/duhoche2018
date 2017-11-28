@@ -1,7 +1,12 @@
 @extends("Client::layouts.default")
 
 @section("meta")
+    <meta name="keywords" content="ILA Du Học, Hè 2018, Chia sẻ những trải nghiệm du học hè">
+    <meta name="description" content="Chia sẻ những trải nghiệm du học hè không thể nào quên của học viên {!! $testmonial_detail->author !!}">
+@stop
 
+@section("title")
+    Trải Nghiệm Du Học Hè - {!! $testmonial_detail->author !!}
 @stop
 
 @section("content")
@@ -90,7 +95,7 @@
                             <p>Để nhận ngay ưu đãi</p>
                         </div>
                         <div class="right-promo-inner">
-                            <a href="{!! route('register') !!}" class="btn btn-register">Đăng ký Ngay</a>
+                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-register">Đăng ký Ngay</a>
                         </div>
                     </div>
                 </div>

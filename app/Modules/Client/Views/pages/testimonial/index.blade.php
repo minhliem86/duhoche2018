@@ -1,8 +1,11 @@
 @extends("Client::layouts.default")
 
 @section("meta")
-
+    <meta name="keywords" content="ILA Du Học, Hè 2018, Chia sẻ những trải nghiệm du học hè">
+    <meta name="description" content="Chia sẻ những trải nghiệm du học hè không thể nào quên của học viên tham gia ILA Du học hè 2017">
 @stop
+
+@section("title", "ILA Du Học Hè 2018 - Trải Nghiệm Du Học Hè")
 
 @section('content')
     <!-- **************** Testtimonial ****************-->
