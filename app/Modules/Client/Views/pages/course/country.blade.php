@@ -22,7 +22,7 @@
                     <h2>ĐIỂM LẠI DU HỌC HÈ 2017</h2>
                     <div class="review-container">
                         <div class="video-wrapper">
-                            <div data-type="youtube" data-video-id="gHSbes0tXaQ"></div>
+                            <div data-type="youtube" data-video-id="{!! $country->video_url !!}"></div>
                         </div>
                     </div>
                 </div>

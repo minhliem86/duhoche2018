@@ -22,16 +22,31 @@
                 </div>
             </div>
             <div class="row">
+                <div class="col-md-12">
+                    <div class="img-box">
+                        <div class="img-container">
+                            <div class="left-img">
+                                <img src="{!! asset($course->img_url) !!}" class="img-responsive" alt="{!! $course->title !!}">
+                            </div>
+                            <div class="right-img">
+                                <div class="img-hack" style="background-image: url('{!! asset($course->img_url) !!}')"></div>
+                            </div>
+                        </div>
+                        <div class="wrap-title">
+                            <h3 class="title-course">{!! $course->title !!}</h3>
+                            <p class="sub-title"><b>Đối tượng:</b> {!! $course->age !!} </p>
+                            <p class="sub-title"><b>Lịch trình:</b> {!! $course->time !!}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-7">
                     <div class="wrap-content">
-                        <h3 class="title-course">{!! $course->title !!}</h3>
                         {!! $course->content !!}
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <div class="img-box">
-                        <img src="{!! asset($course->img_url) !!}" class="img-responsive" alt="{!! $course->title !!}">
-                    </div>
                     <div class="content-2">
                         {!! $course->content_column2 !!}
                         <div class="wrap-btnblog">
