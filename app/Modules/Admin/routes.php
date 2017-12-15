@@ -73,5 +73,9 @@ Route::group(['prefix' => 'admin', 'namespace' => 'App\Modules\Admin\Controllers
         Route::post('promotion/AjaxUpdatePhoto', ['as' => 'admin.promotion.AjaxUpdatePhoto', 'uses' => 'PromotionController@AjaxUpdatePhoto']);
         Route::post('promotion/updateStatus', ['as' => 'admin.promotion.updateStatus', 'uses' => 'PromotionController@updateStatus']);
         Route::resource('/promotion','PromotionController');
+
+        /*CONTEST*/
+        Route::get('/contest', ['as' => 'admin.contest.index', 'uses' => 'ContestController@index']);
+        Route::get('/donwload-contest', ['as' => 'admin.contest.download', 'uses' => 'ContestController@downloadAll']);
     });
 });

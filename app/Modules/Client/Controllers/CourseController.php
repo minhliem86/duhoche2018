@@ -31,7 +31,7 @@ class CourseController extends Controller {
     {
         if($slug && $slugCourse){
             $country = $this->country->findByField('slug', $slug,['title','id'])->first();
-            $course = $this->course->findByField('slug', $slugCourse, ['title', 'description', 'content', 'content_column2','img_url', 'code', 'schedule', "m_keywords", "m_description", "m_img", "age", "time"])->first();
+            $course = $this->course->findByField('slug', $slugCourse, ['title', 'description', 'content', 'content_column2','img_url', 'img_map', 'code', 'schedule', "m_keywords", "m_description", "m_img", "age", "time"])->first();
             return view("Client::pages.course.course", compact('country', 'course'));
         }
 

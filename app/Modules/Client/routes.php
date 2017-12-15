@@ -18,6 +18,11 @@ Route::group(['namespace' => 'App\Modules\Client\Controllers'], function(){
     Route::get('/travel-blog-2017/{tourcode}', ['as'=>'travelblog.tour', 'uses' => 'TravelBlogController@getCourse'])->where('tourcode','[0-9a-zA-Z._\-]+');
     Route::get('/travel-blog-2017/{tourcode}/{album_id}', ['as' => 'travelbog.album', 'uses'=>'TravelBlogController@getAlbum'])->where(['tourcode'=>'[0-9a-zA-Z._\-]+', 'album_id'=>'[0-9]+']);
 
+    /*LANDING PAGE*/
+    Route::get('/di-de-lon', ['as' => 'contest.index', 'uses' => 'ContestController@index']);
+    Route::post('di-de-lon', ['as' => 'contest.post', 'uses' => 'ContestController@postRegister']);
+    Route::get('hoan-tat-dang-ky', ['as' => 'contest.thankyou', 'uses' => 'ContestController@thankyou']);
+
     View::composer(['Client::layouts.discover', 'Client::layouts.header'], function($view)  {
         $country = new App\Repositories\CountryRepository;
         $country_composer = $country->getComposer(['title','slug', 'img_url']);

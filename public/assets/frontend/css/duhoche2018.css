@@ -386,9 +386,57 @@ footer .each-location {
     .course-detail-main .img-box {
       margin-bottom: 20px; } }
   .course-detail-main .img-box .img-container {
-    display: flex; }
+    display: flex;
+    display: -webkit-flex; }
+    @media screen and (max-width: 768px) {
+      .course-detail-main .img-box .img-container {
+        flex-direction: column;
+        -webkit-flex-direction: column; } }
     .course-detail-main .img-box .img-container .left-img {
-      flex: 2/3; }
+      flex-grow: 1;
+      -webkit-flex-grow: 1; }
+      @media screen and (max-width: 768px) {
+        .course-detail-main .img-box .img-container .left-img {
+          flex: 1;
+          -webkit-flex: 1;
+          flex-grow: inherit;
+          -webkit-flex-grow: inherit; } }
+    .course-detail-main .img-box .img-container .right-img {
+      flex-basis: 475px;
+      -webkit-flex-basis: 475px; }
+      @media screen and (max-width: 768px) {
+        .course-detail-main .img-box .img-container .right-img {
+          flex-basis: auto;
+          -webkit-flex-basis: auto; } }
+      .course-detail-main .img-box .img-container .right-img .img-hack {
+        background-size: cover;
+        height: 100%; }
+        @media screen and (max-width: 768px) {
+          .course-detail-main .img-box .img-container .right-img .img-hack {
+            background: none; } }
+  .course-detail-main .img-box .wrap-title {
+    padding: 15px 50px;
+    background: #ffcb05;
+    color: #2b328c; }
+    @media screen and (max-width: 768px) {
+      .course-detail-main .img-box .wrap-title {
+        padding: 10px 30px; } }
+    .course-detail-main .img-box .wrap-title h3.title-course {
+      margin: 0;
+      padding: 0;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      font-size: 24px; }
+      @media screen and (max-width: 768px) {
+        .course-detail-main .img-box .wrap-title h3.title-course {
+          font-size: 18px;
+          line-height: 24px; } }
+    .course-detail-main .img-box .wrap-title p {
+      font-size: 16px;
+      margin-bottom: 12px; }
+      @media screen and (max-width: 768px) {
+        .course-detail-main .img-box .wrap-title p {
+          font-size: 13px; } }
 .course-detail-main .content-2 .wrap-btnblog {
   margin-top: 20px; }
   .course-detail-main .content-2 .wrap-btnblog a {
@@ -547,6 +595,10 @@ footer .footer-content-container {
     border-right: 1px solid #2b328c; }
     footer .footer-content-container .col:last-child {
       border-right: 0; }
+    footer .footer-content-container .col p.text-col {
+      font-size: 16px;
+      margin-top: 20px;
+      font-weight: 600; }
   @media screen and (max-width: 768px) {
     footer .footer-content-container {
       flex-direction: column; }
@@ -771,5 +823,17 @@ section.register {
 .destination-main.destination-travel-blog.album-travel-blog h3 {
   font-size: 16px;
   line-height: 26px; }
+
+/*CUOC THI VIET*/
+form#form_register .btn-upload {
+  width: auto;
+  height: auto;
+  border-radius: 5px 0 0 5px;
+  color: white;
+  padding: 3px 15px; }
+  form#form_register .btn-upload:hover {
+    background: #EF6222; }
+form#form_register .btn-contest {
+  background: #2b328c; }
 
 /*# sourceMappingURL=duhoche2018.css.map */

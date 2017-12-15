@@ -2,13 +2,29 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/mfb.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/script.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/lfm.min.js" />
+        <item url="file://$PROJECT_DIR$/public/assets/admin/dist/js/plugins/ckeditor/lang/mk.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/jquery.form.min.min.js" />
         <item url="file://$PROJECT_DIR$/public/assets/frontend/js/common.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/dropzone.min.min.js" />
+        <item url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/cropper.min.min.js" />
         <item url="file://$PROJECT_DIR$/public/assets/frontend/js/customScript.min.js" />
+        <item url="file://$PROJECT_DIR$/public/assets/admin/dist/js/plugins/ckeditor/lang/en.min.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/mfb.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/script.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/lfm.min.js" />
+      <root url="file://$PROJECT_DIR$/public/assets/admin/dist/js/plugins/ckeditor/lang/mk.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/jquery.form.min.min.js" />
       <root url="file://$PROJECT_DIR$/public/assets/frontend/js/common.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/dropzone.min.min.js" />
+      <root url="file://$PROJECT_DIR$/vendor/unisharp/laravel-filemanager/public/js/cropper.min.min.js" />
       <root url="file://$PROJECT_DIR$/public/assets/frontend/js/customScript.min.js" />
+      <root url="file://$PROJECT_DIR$/public/assets/admin/dist/js/plugins/ckeditor/lang/en.min.js" />
     </CLASSES>
     <SOURCES />
   </library>

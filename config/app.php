@@ -157,7 +157,8 @@ return [
         'Codingo\Dropzoner\DropzonerServiceProvider',
         'Barryvdh\Cors\ServiceProvider',
         'Yocmen\HtmlMinify\HtmlMinifyServiceProvider',
-		'Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider'
+		'Spatie\LaravelAnalytics\LaravelAnalyticsServiceProvider',
+        'Maatwebsite\Excel\ExcelServiceProvider'
 	],
 
 	/*
@@ -205,13 +206,14 @@ return [
 		'URL'       => 'Illuminate\Support\Facades\URL',
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
-        'Form' => 'Collective\Html\FormFacade',
-        'Html' => 'Collective\Html\HtmlFacade',
-        'DataTables' => 'yajra\Datatables\Facades\DataTables',
-        'Image' => 'Intervention\Image\Facades\Image',
+        'Form'      => 'Collective\Html\FormFacade',
+        'Html'      => 'Collective\Html\HtmlFacade',
+        'DataTables'=> 'yajra\Datatables\Facades\DataTables',
+        'Image'     => 'Intervention\Image\Facades\Image',
         'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
-        'Str' => '\Illuminate\Support\Str',
-		'Analytics' => 'Spatie\Analytics\LaravelAnalyticsFacade'
+        'Str'       => '\Illuminate\Support\Str',
+		'Analytics' => 'Spatie\Analytics\LaravelAnalyticsFacade',
+        'Excel'     =>'Maatwebsite\Excel\Facades\Excel'
 	],
 
 ];

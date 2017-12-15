@@ -512,11 +512,62 @@ footer{
     }
     .img-container{
       display: flex;
+      display:-webkit-flex;
+      @include media{
+        flex-direction: column;
+        -webkit-flex-direction: column;
+      }
       .left-img{
-        flex:2/3;
+        //flex:2;
+        flex-grow:1;
+        -webkit-flex-grow: 1;
+        @include media{
+          flex:1;
+          -webkit-flex:1;
+          flex-grow:inherit;
+          -webkit-flex-grow: inherit;
+        }
       }
       .right-img{
-        flex:1/
+        flex-basis:475px;
+        -webkit-flex-basis:475px;
+        @include media{
+          flex-basis:auto;
+          -webkit-flex-basis:auto;
+        }
+        .img-hack{
+          background-size:cover;
+          height:100%;
+          @include media{
+            //min-height:150px;
+            background:none;
+          }
+        }
+      }
+    }
+    .wrap-title{
+      padding:15px 50px;
+      background:$bg-vang;
+      color:$cl-xanh;
+      @include media{
+        padding:10px 30px;
+      }
+      h3.title-course{
+        margin:0; padding:0;
+        margin-bottom:10px;
+        text-transform: uppercase;
+        font-size:24px;
+        @include media{
+          font-size:18px;
+          line-height:24px;
+        }
+      }
+      p{
+        font-size:16px;
+        margin-bottom:12px;
+        @include media{
+          font-size:13px;
+        }
       }
     }
   }
@@ -731,6 +782,11 @@ footer{
       border-right:1px solid $cl-xanh;
       &:last-child{
         border-right:0;
+      }
+      p.text-col{
+        font-size:16px;
+        margin-top:20px;
+        font-weight:600
       }
     }
     @include media(){
@@ -1037,5 +1093,24 @@ section.register{
       font-size:16px;
       line-height:26px;
     }
+  }
+}
+
+
+/*CUOC THI VIET*/
+
+form#form_register{
+  .btn-upload{
+    width:auto;
+    height:auto;
+    border-radius:5px 0 0 5px;
+    color:white;
+    padding:3px 15px;
+    &:hover{
+      background:$cl-cam;
+    }
+  }
+  .btn-contest{
+    background:$cl-xanh;
   }
 }

@@ -40,25 +40,6 @@
         </div>
     </section>
 
-    <section class="promotion-bar hidden-xs hidden-sm">
-        <div class="container">
-            <div class="row">
-                <div class="promotion-bottom">
-                    <div class="wrap-promo-bottom">
-                        <div class="left-promo-inner">
-                            <h3>Đăng Ký Sớm</h3>
-                            <p>Để nhận ngay ưu đãi</p>
-                        </div>
-                        <div class="right-promo-inner">
-                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-register">Đăng ký Ngay</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- **************** /Promotion ****************-->
-
     @include("Client::layouts.discover")
 
     @include("Client::layouts.why")

@@ -101,6 +101,21 @@
                              src="{!! !empty($inst->img_url) ? asset($inst->img_url) : ''!!}">
                     </div>
                 </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Map:</label>
+                    <div class="col-md-10">
+                        <div class="input-group">
+                         <span class="input-group-btn">
+                           <a id="lfm2" data-input="thumbnail2" data-preview="holder2" class="btn btn-primary">
+                             <i class="fa fa-picture-o"></i> Choose
+                           </a>
+                         </span>
+                            {!!Form::hidden('img_map',old('img_map'), ['class'=>'form-control', 'id'=>'thumbnail2' ])!!}
+                        </div>
+                        <img id="holder2" style="margin-top:15px;max-height:100px;"
+                             src="{!! !empty($inst->img_url) ? asset($inst->img_map) : ''!!}">
+                    </div>
+                </div>
             </fieldset>
 
             <fieldset>
@@ -145,6 +160,8 @@
         init_tinymce(url);
         // BUTTON ALONE
         init_btnImage(url, '#lfm');
+
+        init_btnImage(url, '#lfm2');
         /*IMAGE META*/
         init_btnImage(url, '#lfm-meta');
 

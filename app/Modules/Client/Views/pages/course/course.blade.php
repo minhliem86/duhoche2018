@@ -29,13 +29,15 @@
                                 <img src="{!! asset($course->img_url) !!}" class="img-responsive" alt="{!! $course->title !!}">
                             </div>
                             <div class="right-img">
-                                <div class="img-hack" style="background-image: url('{!! asset($course->img_url) !!}')"></div>
+                                <div class="img-hack" style="background-image: url('{!! asset($course->img_map) !!}')">
+                                    <img src="{!! asset($course->img_map) !!}" class="img-responsive visible-xs" alt="{!! $course->title !!}">
+                                </div>
                             </div>
                         </div>
                         <div class="wrap-title">
                             <h3 class="title-course">{!! $course->title !!}</h3>
-                            <p class="sub-title"><b>Đối tượng:</b> {!! $course->age !!} </p>
-                            <p class="sub-title"><b>Lịch trình:</b> {!! $course->time !!}</p>
+                            <p class="sub-title"><b>Đối tượng: </b>{!! $course->age !!} </p>
+                            <p class="sub-title"><b>Lịch trình: </b>{!! $course->time !!}</p>
                         </div>
                     </div>
                 </div>
@@ -59,24 +61,6 @@
                 <div class="col-md-12">
                     <div class="wrap-schedule">
                         {!! $course->schedule !!}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="promotion-bar hidden-xs hidden-sm">
-        <div class="container">
-            <div class="row">
-                <div class="promotion-bottom">
-                    <div class="wrap-promo-bottom">
-                        <div class="left-promo-inner">
-                            <h3>Đăng Ký Sớm</h3>
-                            <p>Để nhận ngay ưu đãi </p>
-                        </div>
-                        <div class="right-promo-inner">
-                            <a href="http://ila-duhoc.edu.vn/duhoche2018/dang-ky?utm_campaign=OSC+Summer+2018&utm_medium=statis&utm_source=Organic" class="btn btn-register">Đăng ký</a>
-                        </div>
                     </div>
                 </div>
             </div>

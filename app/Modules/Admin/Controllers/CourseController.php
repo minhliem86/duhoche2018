@@ -88,6 +88,11 @@ class CourseController extends Controller
         } else {
             $img_url = "";
         }
+        if ($request->has('img_map')) {
+            $img_map = $request->input('img_map');
+        } else {
+            $img_map = "";
+        }
         if ($request->has('meta_images')) {
             $meta_img = $request->input('m_img');
         } else {
@@ -108,6 +113,7 @@ class CourseController extends Controller
             'm_description' => $request->input('m_description'),
             'm_img' => $meta_img,
             'img_url' => $img_url,
+            'img_map' => $img_map,
             'order' => $order,
             'country_id' => $request->input('country_id'),
 
@@ -149,6 +155,7 @@ class CourseController extends Controller
     public function update(Request $request, $id)
     {
         $img_url = $request->input('img_url');
+        $img_map = $request->input('img_map');
         $meta_image = $request->input('m_img');
         $data = [
             'title' => $request->input('title'),
@@ -164,6 +171,7 @@ class CourseController extends Controller
             'm_description' => $request->input('m_description'),
             'm_img' => $meta_image,
             'img_url' => $img_url,
+            'img_map' => $img_map,
             'order' => $request->input('order'),
             'status' => $request->input('status'),
             'country_id' => $request->input('country_id'),
