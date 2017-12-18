@@ -214,8 +214,12 @@
                     quocgia: "Vui lòng chọn quốc gia bạn quan tâm",
                     file: "Vui lòng Upload bài dự thi",
                     school: "Vui lòng nhập tên ngôi trường bạn đang học"
+                },
+                submitHandler: function(form){
+                    $('#submit-btn').attr('disabled','disabled');
                 }
             });
+
         })
 
     </script>
