@@ -1,9 +1,10 @@
 @extends('Admin::layouts.main-layout')
 
 @section('link')
-    {!! Html::link(route('admin.country.create'),'Download',['class'=>'btn btn-primary']) !!}
-
+    {!! Html::link(route('admin.contest.download'),'Download',['class'=>'btn btn-primary']) !!}
 @stop
+
+@section('title','CONTESTS')
 
 @section('content')
     @if(Session::has('error'))

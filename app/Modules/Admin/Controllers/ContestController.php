@@ -19,7 +19,7 @@ class ContestController extends Controller {
 
     public function index()
     {
-        $data = $this->contest->getDataJoinCity(['contests.id as id', 'contests.fullname as fullname','contests.dob as dob','contests.phone as phone','cities.name as name_city', 'contests.quocgia as quocgia', "contests.created_at as create_date"])->paginate(1);
+        $data = $this->contest->getDataJoinCity(['contests.id as id', 'contests.fullname as fullname','contests.dob as dob','contests.phone as phone','cities.name as name_city', 'contests.quocgia as quocgia', "contests.created_at as create_date"])->paginate(10);
         $data->setPath('');
         return view('Admin::pages.contest.index', compact('data'));
     }

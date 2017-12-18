@@ -31,6 +31,19 @@
                 </div>
             </div>
         </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Contests</h3>
+                </div>
+                <div class="panel-body-dashboard">
+                    <div class="wrap-icon text-center">
+                        <i class="fa  fa-comment"></i>
+                        <h5><span class="badge badge-info badge-md">{!! $total_contest !!}</span> Contests</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="row">
         <div class="col-md-12">

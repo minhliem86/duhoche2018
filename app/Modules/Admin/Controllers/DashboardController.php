@@ -8,13 +8,16 @@ use Spatie\LaravelAnalytics\LaravelAnalytics;
 use Spatie\LaravelAnalytics\Period;
 use Carbon\Carbon;
 use Illuminate\Support\Collection;
+use App\Repositories\ContestRepository;
 
 class DashboardController extends Controller {
 
     protected $ga;
+    protected $contest;
 
-    public function __construct(LaravelAnalytics $ga){
+    public function __construct(LaravelAnalytics $ga, ContestRepository $contest){
         $this->ga = $ga;
+        $this->contest = $contest;
     }
 
     public function index(Request $request)
@@ -57,7 +60,8 @@ class DashboardController extends Controller {
             $data =  new Collection($data_analytic);
             $total_pageviews = $rs->totalsForAllResults['ga:pageviews'];
             $total_users = $rs->totalsForAllResults['ga:users'];
-            return view('Admin::pages.dashboard.index', compact('data','total_pageviews', 'total_users'));
+            $total_contest = $this->contest->all()->count();
+            return view('Admin::pages.dashboard.index', compact('data','total_pageviews', 'total_users', 'total_contest'));
         }
 
 
